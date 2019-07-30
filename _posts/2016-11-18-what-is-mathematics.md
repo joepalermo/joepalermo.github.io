@@ -1,7 +1,6 @@
 ---
-layout: post
+layout: default
 title: "What is Mathematics"
-author: "Joe Palermo"
 ---
 
 Most people who study math, even advanced math, don’t generally think much about the philosophical foundations of the field. A few years ago I became briefly obsessed with this topic. When I dug into it I realized that it’s actually quite simple.
