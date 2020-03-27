@@ -23,9 +23,10 @@ However, outside of the training set things get more interesting. Any non-trivia
 
 What's interesting is that a model will be constrained to different degrees at different points, depending both on the data and the inductive biases. The degree to which it is constrained is again this concept of "model uncertainty". Model uncertainty can be particularly useful when we're in a situation where we get to influence what future data is obtained. This is the case in active learning and reinforcement learning, where a learner has to decide which parts of state-space to explore during training, so as to perform more optimally later. If at a particular point in state-space, model uncertainty is high that may be a good candidate for exploration because the model is underspecified at that point. More data at that particular point will aid in reducing model uncertainty. How much it will help depends on how noisy the data is (i.e. data uncertainty).
 
-Bayesians are people who are fascinated by this notion of model uncertainty.
+*Bayesians are simply people who are fascinated by model uncertainty.*
 
 
+Additional Notes:
 
 (1) Note that most of the breakthroughs deep learning research can be thought of as coming up with better inductive biases for different classes of problems (convolution for object recognition, self-attention for NLP, etc...)
 
