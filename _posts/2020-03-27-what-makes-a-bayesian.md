@@ -1,5 +1,3 @@
-What makes a Bayesian?
-
 Supervised learning is concerned with learning associative maps from data. What makes SL interesting, is that it is particularly concerned with learning associative maps that generalize outside of the training set. But how is such generalization possible?
 
 If I observe f(0) = 1, and f(1) = 2, how confident can I be that f(2) = 3? Of course, in the general case you can't say anything about f(2) at all. The Free Lunch Theorem summarizes this by saying in effect that averaged over all possible data generating distributions, no model can generalize better than any other.
