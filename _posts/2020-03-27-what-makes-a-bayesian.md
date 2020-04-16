@@ -3,6 +3,8 @@ layout: post
 title: What Makes a Bayesian?
 ---
 
+## Supervised Learning and Generalization
+
 Supervised learning is concerned with learning associative maps from data. What makes SL interesting, is that it is particularly concerned with learning associative maps that generalize outside of the training set. But how is such generalization possible?
 
 If I observe f(0) = 1, and f(1) = 2, how confident can I be that f(2) = 3? Of course, in the general case you can't say anything about f(2) at all. The Free Lunch Theorem summarizes this by saying in effect that averaged over all possible data generating distributions, no model can generalize better than any other.
@@ -15,13 +17,23 @@ This is why ensembles work. If you train many independent models from the same d
 
 There are a few ways that a model can be made less underspecified by the data. The simplest of course is to add more data. But this is not always possible. Another way to reduce underspecification is to simplify the model (i.e. reduce model capacity), since a simpler model has less room to wiggle arbitrarily. But this is helpful only up to a point. A model can be made too simple, in which case it won't have enough capacity to represent the true data generating function.
 
+## Model Uncertainty
+
 In some sense we can think of the degree to which our models are underspecified by the data as "model uncertainty". i.e. our uncertainty about which model in parameter space is closest to being the actual generating function of our data (2).
 
 Let's think about how data constrains our models. At any given point in the training set, a trained model should generally be well specified. We already know what the correct value of the model is! However, data can be noisy, which complicates that statement and also leads to another type of uncertainty which we can think of as "data uncertainty", though it is often called "aleatoric uncertainty" (aleatoric just means "characterized by randomness").
 
-However, outside of the training set things get more interesting. Any non-trivial model will be underspecified at such points. Nonetheless, that doesn't mean the model is free to do anything at that point. It is constrained by its inductive biases (3).
+However, outside of the training set things get more interesting. Any non-trivial model will be underspecified to a degree at such points. Nonetheless, that doesn't mean the model is free to do anything at that point. It is constrained by its inductive biases (3).
 
 What's interesting is that a model will be constrained to different degrees at different points, depending both on the data and the inductive biases. The degree to which it is constrained is again this concept of "model uncertainty". Model uncertainty can be particularly useful when we're in a situation where we get to influence what future data is obtained. This is the case in active learning and reinforcement learning, where a learner has to decide which parts of state-space to explore during training, so as to perform more optimally later. If at a particular point in state-space, model uncertainty is high that may be a good candidate for exploration because the model is underspecified at that point. More data at that particular point will aid in reducing model uncertainty. How much it will help depends on how noisy the data is (i.e. data uncertainty).
+
+We can measure model uncertainty with the posterior of the model parameters given the data:
+
+`P(\theta|D)`
+
+where \theta are the model parameters and D is the dataset. We can arrive at this expression by applying Bayes rule:
+
+`P(\theta|D) = \frac{P(D|\theta)P(\theta)}{P(D)}`
 
 *Bayesians are simply people who are fascinated by model uncertainty.*
 
