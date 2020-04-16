@@ -33,9 +33,11 @@ We can measure model uncertainty with the posterior of the model parameters give
 
 where \theta are the model parameters and D is the dataset. We can arrive at this expression by applying Bayes rule:
 
-`P(\theta|D) = \frac{P(D|\theta)P(\theta)}{P(D)}`
+`P(\theta|D) = \frac{P(D|\theta)P(\theta)}{P(D)} \propto P(D|\theta)P(\theta)`
 
-*Bayesians are simply people who are fascinated by model uncertainty.*
+## Bayesians
+
+You may sometimes hear people jokingly (or seriously) refer to themselves as Bayesians. Some people even describe the moment they self-identified as Bayesians as a moment of "enlightenment" (https://www.lesswrong.com/posts/Ti3Z7eZtud32LhGZT/my-bayesian-enlightenment). In a machine learning context, I believe this identity has a special significance which ought to be more widely appreciated. *Fundamentally, Bayesians are simply people who are fascinated by model uncertainty.* That is, Bayesians are bothered and fascinated by the fact that any given model trained simply to maximize likelihood will generalize in a way that is at least somewhat arbitrary, and can potentially be improved by accounting for this. For me this was recently a big "aha" moment, and is what inspired me to write this post.
 
 
 Additional Notes:
