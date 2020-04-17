@@ -44,13 +44,17 @@ where \theta are the model parameters and D is the dataset. Probability is the l
 One hope for Bayesian ML is that it will enable us to more efficiently build the most effective ensembles. But is Bayesian machine learning just a fancy way of building ensembles? In a sense it is, but ensembles are more powerful and interesting than they first appear. They are not just a means of achieving better predictions by averaging. Just as we can take an average over the predictions from an ensemble, we can also take the variance or the entropy. Suppose, we're working on a binary classification problem and we have an ensemble of 2 models \theta_1 and \theta_2. Furthermore, suppose that at a fixed point in our test set, \theta_1 and \theta_2 produce the following predictions:
 
 class1, class2
+
 \theta_1: 0.2, 0.8
+
 \theta_2: 0.5, 0.5
 
 The variance or entropy within a column tells us about model uncertainty at this point in the test set. To the degree to which we reduce our model uncertainty, then we obtain more clarity about data uncertainty. For instance, if every model we sample from the posterior provides consistent predictions, then we can measure data uncertainty by taking the variance or entropy across the rows:
 
 class1, class2
+
 \theta_1: 0.5, 0.5
+
 \theta_2: 0.5, 0.5
 
 In this case the entropy across the rows is high, indicating a high level of noise in the data. However, such an assessment can only be trusted to the extent to which the posterior is accurate.
