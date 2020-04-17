@@ -31,9 +31,27 @@ We can measure model uncertainty with the posterior of the model parameters give
 
 `P(\theta|D)`
 
-where \theta are the model parameters and D is the dataset. We can arrive at this expression by applying Bayes rule:
+where \theta are the model parameters and D is the dataset. Probability is the language of uncertainty. It is a way of formalizing degrees of uncertainty. That is why we can think of `P(\theta|D)` as providing us with a measure of uncertainty about the parameters of our model, i.e. model uncertainty. We can arrive at this expression by applying Bayes rule:
 
 `P(\theta|D) = \frac{P(D|\theta)P(\theta)}{P(D)} \propto P(D|\theta)P(\theta)`
+
+`P(D|\theta)P(\theta)` should be familiar to supervised learners. The term `P(D|\theta)` is known as the likelihood of data. This term literally is a loss function. The `P(\theta)` is a known as a prior, and it corresponds to the use of weight regularization (such as `L_1` or `L_2`), also a standard component of loss functions.
+
+`P(\theta|D)` is a probability density over the parameters of the model conditioned on the data. Having the probability density over the parameters means that for any given point in parameter space, we can assess how likely it is to be the parameter set that produces the generating function of our data. Furthermore, we can in principle at least, find the point of maximum probability, known as the "maximum a posterior" or MAP estimate. There may in fact be many such points in parameter space, especially if we consider points that are nearly equal in probability. A collection of many such high probability parameter sets can be used to construct an ensemble. If the constituent parameter sets all have high posterior probability, then they are all "good" models of the data, and if they also produce different predictions, then an ensemble of them is likely to produce predictions that are better still. To single out any one of those individual models and call "the model" of our data would be arbitrary, but this is exactly what people do all the time in supervised learning. In practice this is understandable due to the computational constraints of Bayesian approaches and ensembling more generally. But we should at least be aware that are are doing this and should be mindful of opportunities to do better.
+
+One hope for Bayesian ML is that it will enable us to more efficiently build the most effective ensembles. But is Bayesian machine learning just a fancy way of building ensembles? In a sense it is, but ensembles are more powerful and interesting than they first appear. They are not just a means of achieving better predictions by averaging. Just as we can take an average over the predictions from an ensemble, we can also take the variance or the entropy. Suppose, we're working on a binary classification problem and we have an ensemble of 2 models \theta_1 and \theta_2. Furthermore, suppose that at a fixed point in our test set, \theta_1 and \theta_2 produce the following predictions:
+
+class1, class2
+\theta_1: 0.2, 0.8
+\theta_2: 0.5, 0.5
+
+The variance or entropy within a column tells us about model uncertainty at this point in the test set. To the degree to which we reduce our model uncertainty, then we obtain more clarity about data uncertainty. For instance, if every model we sample from the posterior provides consistent predictions, then we can measure data uncertainty by taking the variance or entropy across the rows:
+
+class1, class2
+\theta_1: 0.5, 0.5
+\theta_2: 0.5, 0.5
+
+In this case the entropy across the rows is high, indicating a high level of noise in the data. However, such an assessment can only be trusted to the extent to which the posterior is accurate.
 
 ## Bayesians
 
