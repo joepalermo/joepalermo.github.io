@@ -15,4 +15,4 @@ It makes a mockery of our conventional notion of time. Here I’ll use the word 
 
 Our own universe seems to have had a beginning, but surely our universe is part of a larger process, as is already implied by our best explanations of Everything. 
 
-Somehow Everything must be woven as an infinite tapestry with no beginning and no end. I find this to be a tremendously comforting idea.
+Somehow Everything must be woven as an infinite tapestry with no beginning and no end. Whatever Everything is, it somehow *must* be. In other words, it necessitates it’s own existence, like a physical instantiation of a mathematical theorem. This means that each of us somehow *must* be. I find this to be a tremendously comforting idea.
