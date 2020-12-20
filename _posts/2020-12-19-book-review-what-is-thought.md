@@ -35,7 +35,7 @@ Therein lies the explanation for the amazing generalization powers of the human 
 
 ***
 
-Evolution and Meta-Learning Stacks
+Evolution
 
 Baum starts chapter 5 by discussing the problem evolution solved in abstract terms.
 
@@ -51,13 +51,27 @@ This vast number of trials might allow an exponential search on strings of size 
 
 Suppose we had an algorithm that returns the best n bit program after looking at only n^4 possibilities. In chapter 2, I estimated that the program in human DNA is about 80 million bits long. Finding the best 80 million bit program using the hypothetical algorithm would require looking at about 10^32 possibilities. Evolution may have looked at this many, so this would have a chance of working.” pg 107-108
 
--Of course analogy breaks down, as there is no most fit organism
--But as a thought experiment it’s very interesting
--Estimating the computational complexity of evolution
+Of course this analogy between the search for programs that generate a particular dataset and evolution breaks down in various ways.
+
+Firstly it is not clear if one can define in evolution the notion of a most fit organism. Which organism is more fit, humans or ants? Note that ants apparently have a worldwide population of roughly 10^16 individuals!
+
+Secondly, the problem evolution faces is to find genes which generate organisms which in turn reproduce their genes. These genes are essentially programs which generate biochemical machines that collectively manifest evolutionarily fit behaviours. It’s not clear to me that this is analogous to a program for a universal Turing machine that simply reproduces a fixed dataset.
+
+However, as an intuition pump I find this thought experiment very intriguing. It’s certainly the first attempt I’ve seen to estimate the computational complexity of evolution.
+
+What sort of an algorithm for this problem could have such low computational complexity, e.g.  O(n^4)? Well if we relax the constraint that we must find the absolute best short program then it’s reasonable to suppose one could do it with some kind of hill-climbing procedure. Of course, in very rough terms this is clearly how evolution works.
+
+Hill Climbing
+
+In some sense it’s clear that hill climbing is the only way that simple adaptive systems can become complex adaptive systems.
 
 ***
 
-Interesting Ideas
+Meta-Learning Stacks
+
+***
+
+Notes on Interesting Ideas
 
 Ch 1
 
