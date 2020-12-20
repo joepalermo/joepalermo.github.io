@@ -1,38 +1,59 @@
+WORK-IN-PROGRESS :)
+
 
 Introduction
 
 In 2004, physicist Eric Baum published the book What is Thought attempting to answer the question of how “the computational events that take place within the spatial boundaries of your brain can be accounted for by computer science”. In doing so he arrived at many insights which I believe are still not fully appreciated by AI researchers today.
 
-In describing his work in the introduction to the book he wrote “As much as seems warrented, the discussion in this book follows what I perceive to be folk wisdom among computer scientists interested in cognition, but the attempt to pull ideas together and see whether a fully coherent picture emerges will lead us in directions that have been under explored.”
+In describing his work in the introduction to the book he wrote “As much as seems warrented, the discussion in this book follows what I perceive to be folk wisdom among computer scientists interested in cognition, but the attempt to pull ideas together and see whether a fully coherent picture emerges will lead us in directions that have been under explored.” pg. 2
 
 The book follows the example of a book published by the famous physicist Erwin Schrodinger in 1944 called What is Life. The book sought to answer the analogous question of how biology can ultimately be accounted for by physics and chemistry. In fact the answers produced by both books are also analogous because they are anchored by evolution:
 
-“The situation we have is in fact parallel to that facing Schrodinger: the mind is complex because it is the outcome of evolution. Evolution has build thought processes that act unlike the standard algorithms understood by computer scientists. To understand the mind we need to understand these thought processes, and the evolutionary process that produced them at a computational level.”
+“The situation we have is in fact parallel to that facing Schrodinger: the mind is complex because it is the outcome of evolution. Evolution has build thought processes that act unlike the standard algorithms understood by computer scientists. To understand the mind we need to understand these thought processes, and the evolutionary process that produced them at a computational level.” pg. 2
 
-Having read Baum’s book I can no longer discount the importance to an AI researcher of understanding evolution.
+Having read Baum’s book I can no longer discount the importance to an AI researcher of understanding evolution. Knowing what was required for evolution to discover how to build intelligent systems can potentially give us clues about the path ahead in AI. However this is not just a book about evolution, and Baum digs into results from a wide array of disciplines to shed light on the problem.
+
+In this review I will touch upon the key ideas and takeaways that most excite me.
 
 ***
+
 The Core Theme
 
-“There is an underlying theme to almost everything this book says, which can be expressed in a single summary sentence. Here it is. Semantics is equivalent to capturing and exploiting the compact structure of the world, and thought is all about semantics.”
+“There is an underlying theme to almost everything this book says, which can be expressed in a single summary sentence. Here it is. Semantics is equivalent to capturing and exploiting the compact structure of the world, and thought is all about semantics.” pg. 3
 
 This sentence has a lot packed into it, so let’s take it apart. Firstly, what is meant by compact structure? This is a reference to Occam’s Razor, the notion that simple (i.e. compact) hypotheses ought to be preferred as explanations. There is in fact a theorem (TODO: find source) that the shortest program that generates a given (training) dataset provides the best possible generalization performance, i.e. performance on unseen data. This deep but simple result is in some sense all we need to understand to see how intelligent minds like ours can exist. We will come back to it many times.
 
 “Semantics” has always seemed to me an odd word. I believe it has its origins in philosophy and in quibbles philosophers have had about how meaning arises. There is a classic question in philosophy of how symbols come to acquire meaning. This question in the end is not as deep as it at first seems and has been beaten into the ground by many people before so we will not belabour it much here. Symbols, words, etc… acquire meaning, in other words associations with other phenomena in the world, simply due to isomorphisms between themselves and the phenomena. Meaning simply cannot be kept out. For more reading on this topic look into Douglas Hofstadter’s Godel, Escher, Bach.
 
-So to say that “semantics is equivalent to capturing and exploiting the compact structure of the world” is to say that if a compact model is structured analogously to the world, then that model has acquired semantics with respect to the world. That is if the model begins interacting with the world, then elements of the model have come to represent corresponding elements of the world. To say that “thought is all about semantics” is simply to say that thought is the execution of this model.
+So to say that “semantics is equivalent to capturing and exploiting the compact structure of the world” is to say that if a compact model is structured analogously to the world, then that model has acquired semantics with respect to the world. That is if the model begins interacting with the world, then elements of the model will come to represent corresponding elements of the world. To say that “thought is all about semantics” is simply to say that thought is the execution of such a model.
 
 The compactness of the model is key because it is the only thing which guarantees generalization. AI researchers are always remarking on the amazing ability that humans have for generalizing from limited experience. This is possible because humans are built from the compact code of our genome. The human genome expresses all of the information needed to construct a mind and does so with at most 750MB (3 billion base pairs * 2 bits per base pair = 6B bits = 750 MB). In fact, in chapter 2 Baum estimates that the effective information content of the genome may be much less (10 MB in his estimation), but the validity of his argument doesn’t rest on whatever specific number is used. The point is simply that the genome is massively compressed compared to the process which generated it - namely evolution.
 
-In chapter 5, Baum very roughly estimates that evolution ran through on the order of 10^35 creatures in the process that lead to humans. To simulate the outcome of the lifetime of a single creature then requires many, many more orders of magnitude in computation. Clearly the amount of computation utilized by evolution dwarfs the size of the genome. Yet, the genome  represents a meaningful compression of the results of that computation.
+In chapter 5, Baum very roughly estimates that evolution ran through on the order of 10^35 creatures in the process that lead to humans. Of course, to simulate the outcome of the lifetime of a single creature requires many, many more orders of magnitude in computation. Clearly the amount of computation utilized by evolution dwarfs the size of the genome. Yet, the genome  represents a meaningful compression of the results of that computation.
 
-Therein lies the explanation for the amazing generalization powers of the human mind. Evolution has produced amazingly compact programs which are capable of generating creatures that can survive and thrive in our world. The compactness of the program is what guarantees generality in a wide variety of circumstances. Of course, this alone does not account for the specific quality of human intelligence as opposed to the myriad forms of animal intelligence. The unique qualities of human intelligence require further explanation which Baum expounds on in later chapters.
+Therein lies the explanation for the amazing generalization powers of the human mind. Evolution has produced amazingly compact programs which are capable of generating creatures that can survive and thrive in our world. The compactness of the program compared to the amount of computation that was spent to produce it is what guarantees generality. Of course, this alone does not account for the specific quality of human intelligence as opposed to the myriad forms of animal intelligence. The unique qualities of human intelligence require further explanation which Baum expounds on in later chapters.
 
 ***
 
 Evolution and Meta-Learning Stacks
 
-…
+Baum starts chapter 5 by discussing the problem evolution solved in abstract terms.
+
+“Suppose we have some data D, a long series of 0s and 1s. We want a compact representation of it. The first step is to pick some class of hypothesis functions to explore for such a representation. Let’s begin with a Turing machine representation and look for an input for a particular universal Turing machine M such as the laptop on which I’m typing this. The input I will be some string of 1s and 0s. When we feed I into machine M as M’s input, M will compute…and hopefully print out D… now the question is, How do we find such an input I? Moreover, how do we find the smallest such input I that could be regarded as the most compact representation of the data?
+
+The most straightforward approach is to try all possible input strings in order of their length…
+
+This approach is straightforward but problematic. The most serious problem is that it takes too long. To have found a program that is n bits long, we will have to had to search through all programs that are n-1 bits long [of which there are 2^(n-1)]… If n is only 100, we would have to search…10^33 different programs…
+
+Evolution had access to massive computation. We can very roughly estimate that evolution ran through 10^35 different creatures in the exploration that led to human beings.
+
+This vast number of trials might allow an exponential search on strings of size 100 but not much longer. It would not suffice to find our DNA or almost any of our thoughts…
+
+Suppose we had an algorithm that returns the best n bit program after looking at only n^4 possibilities. In chapter 2, I estimated that the program in human DNA is about 80 million bits long. Finding the best 80 million bit program using the hypothetical algorithm would require looking at about 10^32 possibilities. Evolution may have looked at this many, so this would have a chance of working.” pg 107-108
+
+-Of course analogy breaks down, as there is no most fit organism
+-But as a thought experiment it’s very interesting
+-Estimating the computational complexity of evolution
 
 ***
 
@@ -59,6 +80,14 @@ Ch 5
 -Hill climbing works because it drags the whole system along the path to better performance
 -Biological evolution is more powerful than the “ordinary” hill climbing we see in ML for example, and this is because evolution leverages lots of meta-learning
 -> In fact, we can think of this as a meta-learning stack, meta-meta-meta-….-learning
+
+Ch 6
+
+-NNs are big but still effectively compact models due to various factors
+
+-Humans… algorithm… uses modular structure.. it may be better to think in terms of a programming language with instructions that represent the action of modules
+-The mind is capable of reflection, i.e. manipulating a representation in the mind through a series of steps
+-
 
 Other chapters
 
