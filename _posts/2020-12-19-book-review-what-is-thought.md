@@ -1,7 +1,6 @@
-WORK-IN-PROGRESS :)
+# This is a WORK-IN-PROGRESS :)
 
-
-Introduction
+## Introduction
 
 In 2004, physicist Eric Baum published the book What is Thought attempting to answer the question of how “the computational events that take place within the spatial boundaries of your brain can be accounted for by computer science”. In doing so he arrived at many insights which I believe are still not fully appreciated by AI researchers today.
 
@@ -17,7 +16,7 @@ In this review I will touch upon the key ideas and takeaways that most excite me
 
 ***
 
-The Core Theme
+## The Core Theme
 
 “There is an underlying theme to almost everything this book says, which can be expressed in a single summary sentence. Here it is. Semantics is equivalent to capturing and exploiting the compact structure of the world, and thought is all about semantics.” pg. 3
 
@@ -35,7 +34,7 @@ Therein lies the explanation for the amazing generalization powers of the human 
 
 ***
 
-Evolution
+## Evolution
 
 Baum starts chapter 5 by discussing the problem evolution solved in abstract terms.
 
@@ -49,7 +48,7 @@ Evolution had access to massive computation. We can very roughly estimate that e
 
 This vast number of trials might allow an exponential search on strings of size 100 but not much longer. It would not suffice to find our DNA or almost any of our thoughts…
 
-Suppose we had an algorithm that returns the best n bit program after looking at only n^4 possibilities. In chapter 2, I estimated that the program in human DNA is about 80 million bits long. Finding the best 80 million bit program using the hypothetical algorithm would require looking at about 10^32 possibilities. Evolution may have looked at this many, so this would have a chance of working.” pg 107-108
+Suppose we had an algorithm that returns the best n bit program after looking at only n^4 possibilities. In chapter 2, I estimated that the program in human DNA is about 80 million bits long. Finding the best 80 million bit program using the hypothetical algorithm would require looking at about 10^32 possibilities. Evolution may have looked at this many, so this would have a chance of working.” pg. 107-108
 
 Of course this analogy between the search for programs that generate a particular dataset and evolution breaks down in various ways.
 
@@ -61,17 +60,21 @@ However, as an intuition pump I find this thought experiment very intriguing. It
 
 What sort of an algorithm for this problem could have such low computational complexity, e.g.  O(n^4)? Well if we relax the constraint that we must find the absolute best short program then it’s reasonable to suppose one could do it with some kind of hill-climbing procedure. Of course, in very rough terms this is clearly how evolution works.
 
-Hill Climbing
+## Hill Climbing
 
-In some sense it’s clear that hill climbing is the only way that simple adaptive systems can become complex adaptive systems.
+Hill climbing is the only way that simple systems can become complex systems without anything getting injected from the outside. As humans we can design complex systems from scratch, but that’s only because we are the result of a very long process of hill climbing which began from extremely simple systems.
+
+Clearly hill climbing is more efficient than random search because it makes use of the heuristic than a good solution can be made into a better solution through incremental steps starting from the good solution. If you jump too far away from the good solution in one jump then you don’t have any guarantees about what you’ll find there and you’re back to random search.
+
+Baum explains very nicely another reason why hill climbing is so effective:  “[Hill climbing] essentially does credit assignment on each change of candidate solutions. That is, when the algorithm makes a change in one or a few components of a big complicated solution, say a program or a neural net, it evaluates whether the change is good in the context of the rest of its current choices of all the other parameter values in the system…In this way it assigns credit to that particular choice of component, in the context of the whole solution.” pg. 120
+
+## Meta-Learning Stacks
+
+Forthcoming…
 
 ***
 
-Meta-Learning Stacks
-
-***
-
-Notes on Interesting Ideas
+## Notes on Interesting Ideas
 
 Ch 1
 
