@@ -93,6 +93,6 @@ Baum reflects on how the learning procedure of evolution differs from machine le
 
 *“If only backpropagation is done on a network, there is inherently no way to discover sex or language. There is no way to even express changes in the learning procedure in the representation being used. But evolution, by contrast, is manipulating such a powerful representation that it has the capability of learning higher-level structure to improve its learning…
 
-[Furtheremore], evolution is benefiting from throwing truly massive computational resources at the problem. Evolution worked for billions of years before discovering structures such as Hox genes and the networks that render them meaningful.”* pg. 123
+…evolution is benefiting from throwing truly massive computational resources at the problem. Evolution worked for billions of years before discovering structures such as Hox genes and the networks that render them meaningful.”* pg. 123
 
 Reflecting on this has changed my view on how AGI is likely to be created. Discovery of the sort of compact structure required to build general intelligence is likely going to require massive computational search mediated by meta-learning at several levels in the process. This is reminiscent of Richard Sutton’s essay [“The Bitter Lesson”](http://www.incompleteideas.net/IncIdeas/BitterLesson.html).
