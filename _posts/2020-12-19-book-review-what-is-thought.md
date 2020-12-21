@@ -1,13 +1,12 @@
 WORK-IN-PROGRESS :)
 
-
 ## Introduction
 
 In 2004, physicist Eric Baum published the book *What is Thought* attempting to answer the question of how *“the computational events that take place within the spatial boundaries of your brain can be accounted for by computer science”*. In doing so he arrived at many insights which I believe are still not fully appreciated by AI researchers today.
 
 In describing his work in the introduction to the book he wrote: *“As much as seems warrented, the discussion in this book follows what I perceive to be folk wisdom among computer scientists interested in cognition, but the attempt to pull ideas together and see whether a fully coherent picture emerges will lead us in directions that have been under explored.”* pg. 2
 
-The book follows the example of a book published by the famous physicist Erwin Schrodinger in 1944 called *What is Life*. The book sought to answer the analogous question of how biology can ultimately be accounted for by physics and chemistry. In fact the answers produced by both books are also analogous because they are anchored by evolution:
+The book follows the example of a book published by the famous physicist Erwin Schrödinger in 1944 called *What is Life*. The book sought to answer the analogous question of how biology can ultimately be accounted for by physics and chemistry. In fact the answers produced by both books are also analogous because they are anchored by evolution:
 
 *“The situation we have is in fact parallel to that facing Schrodinger: the mind is complex because it is the outcome of evolution. Evolution has build thought processes that act unlike the standard algorithms understood by computer scientists. To understand the mind we need to understand these thought processes, and the evolutionary process that produced them at a computational level.”* pg. 2
 
@@ -35,17 +34,17 @@ Therein lies the explanation for the amazing generalization powers of the human 
 
 Baum starts chapter 5 by discussing the problem evolution solved in abstract terms.
 
-*“Suppose we have some data D, a long series of 0s and 1s. We want a compact representation of it. The first step is to pick some class of hypothesis functions to explore for such a representation. Let’s begin with a Turing machine representation and look for an input for a particular universal Turing machine M such as the laptop on which I’m typing this. The input I will be some string of 1s and 0s. When we feed I into machine M as M’s input, M will compute…and hopefully print out D… now the question is, How do we find such an input I? Moreover, how do we find the smallest such input I that could be regarded as the most compact representation of the data?
+*“Suppose we have some data D, a long series of 0s and 1s. We want a compact representation of it. The first step is to pick some class of hypothesis functions to explore for such a representation. Let’s begin with a Turing machine representation and look for an input for a particular universal Turing machine M such as the laptop on which I’m typing this. The input I will be some string of 1s and 0s. When we feed I into machine M as M’s input, M will compute…and hopefully print out D… now the question is, How do we find such an input I? Moreover, how do we find the smallest such input I that could be regarded as the most compact representation of the data?*
 
-The most straightforward approach is to try all possible input strings in order of their length…
+*The most straightforward approach is to try all possible input strings in order of their length…*
 
-This approach is straightforward but problematic. The most serious problem is that it takes too long. To have found a program that is n bits long, we will have to had to search through all programs that are n-1 bits long [of which there are 2^(n-1)]… If n is only 100, we would have to search…10^33 different programs…
+*This approach is straightforward but problematic. The most serious problem is that it takes too long. To have found a program that is n bits long, we will have to had to search through all programs that are n-1 bits long [of which there are 2^(n-1)]… If n is only 100, we would have to search…10^33 different programs…*
 
-Evolution had access to massive computation. We can very roughly estimate that evolution ran through 10^35 different creatures in the exploration that led to human beings.
+*Evolution had access to massive computation. We can very roughly estimate that evolution ran through 10^35 different creatures in the exploration that led to human beings.*
 
-This vast number of trials might allow an exponential search on strings of size 100 but not much longer. It would not suffice to find our DNA or almost any of our thoughts…
+*This vast number of trials might allow an exponential search on strings of size 100 but not much longer. It would not suffice to find our DNA or almost any of our thoughts…*
 
-Suppose we had an algorithm that returns the best n bit program after looking at only n^4 possibilities. In chapter 2, I estimated that the program in human DNA is about 80 million bits long. Finding the best 80 million bit program using the hypothetical algorithm would require looking at about 10^32 possibilities. Evolution may have looked at this many, so this would have a chance of working.”* pg. 107-108
+*Suppose we had an algorithm that returns the best n bit program after looking at only n^4 possibilities. In chapter 2, I estimated that the program in human DNA is about 80 million bits long. Finding the best 80 million bit program using the hypothetical algorithm would require looking at about 10^32 possibilities. Evolution may have looked at this many, so this would have a chance of working.”* pg. 107-108
 
 Of course this analogy between the search for programs that generate a particular dataset and evolution breaks down in various ways.
 
@@ -67,15 +66,15 @@ Baum explains very nicely another reason why hill climbing is so effective:  *�
 
 ## Meta-Learning Stacks
 
-*“Biological evolution seems to have done some things that may be more powerful than ordinary hill climbing. It seems to have learned better how to learn as it went along.
+*“Biological evolution seems to have done some things that may be more powerful than ordinary hill climbing. It seems to have learned better how to learn as it went along.*
 
-For example, evolution discovered regulatory circuits involving Hox genes and other toolkit genes that seem to have semantic meaning, for example, the ey gene, which essentially codes “build an eye here.”…
+*For example, evolution discovered regulatory circuits involving Hox genes and other toolkit genes that seem to have semantic meaning, for example, the ey gene, which essentially codes “build an eye here.”…*
 
-Having discovered such semantic units… evolution then continued to explore how to swap these units around in meaningful ways. So, most of the evolution of different body plans since at least the origin of bilaterally symmetric animals appears to have been learning how to regulate the existing meaningful genes…
+*Having discovered such semantic units… evolution then continued to explore how to swap these units around in meaningful ways. So, most of the evolution of different body plans since at least the origin of bilaterally symmetric animals appears to have been learning how to regulate the existing meaningful genes…*
 
-We can imagine that this kind of search can be extremely powerful. Instead of trying various meaningless base changes, almost all of which do nothing useful, evolution effectively searched over combinations of meaningful macros. Add long legs… Try a shell… Take the brain and scale it up…
+*We can imagine that this kind of search can be extremely powerful. Instead of trying various meaningless base changes, almost all of which do nothing useful, evolution effectively searched over combinations of meaningful macros. Add long legs… Try a shell… Take the brain and scale it up…*
 
-There is another way evolution may have evolved to evolve better. Evolution may have discovered earlier, and at a lower level, that if introns were added into genes at appropriate locations, crossover would swap around building blocks, leading to semantically sensible searches and thus speeding up evolution.”* pg. 120-121
+*There is another way evolution may have evolved to evolve better. Evolution may have discovered earlier, and at a lower level, that if introns were added into genes at appropriate locations, crossover would swap around building blocks, leading to semantically sensible searches and thus speeding up evolution.”* pg. 120-121
 
 Baum notes that this last point is (or was) somewhat controversial at the time of his writing. But he provides a very clear argument that there is pressure for evolution to generate mechanisms of this sort:
 
