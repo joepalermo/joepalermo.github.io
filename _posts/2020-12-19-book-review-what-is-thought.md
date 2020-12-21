@@ -1,6 +1,7 @@
-# This is a WORK-IN-PROGRESS :)
+WORK-IN-PROGRESS :)
 
-## Introduction
+
+Introduction
 
 In 2004, physicist Eric Baum published the book What is Thought attempting to answer the question of how “the computational events that take place within the spatial boundaries of your brain can be accounted for by computer science”. In doing so he arrived at many insights which I believe are still not fully appreciated by AI researchers today.
 
@@ -10,13 +11,13 @@ The book follows the example of a book published by the famous physicist Erwin S
 
 “The situation we have is in fact parallel to that facing Schrodinger: the mind is complex because it is the outcome of evolution. Evolution has build thought processes that act unlike the standard algorithms understood by computer scientists. To understand the mind we need to understand these thought processes, and the evolutionary process that produced them at a computational level.” pg. 2
 
-Having read Baum’s book I can no longer discount the importance to an AI researcher of understanding evolution. Knowing what was required for evolution to discover how to build intelligent systems can potentially give us clues about the path ahead in AI. However this is not just a book about evolution, and Baum digs into results from a wide array of disciplines to shed light on the problem.
+Having read Baum’s book I’ve been awakened to the notion that understanding evolution in detail can potentially be helpful to the AI researcher. Knowing what was required for evolution to discover how to build intelligent systems can potentially give us clues about the path ahead in AI. However this is not just a book about evolution, and Baum digs into results from a wide array of disciplines to shed light on the problem.
 
 In this review I will touch upon the key ideas and takeaways that most excite me.
 
 ***
 
-## The Core Theme
+The Core Theme
 
 “There is an underlying theme to almost everything this book says, which can be expressed in a single summary sentence. Here it is. Semantics is equivalent to capturing and exploiting the compact structure of the world, and thought is all about semantics.” pg. 3
 
@@ -34,7 +35,7 @@ Therein lies the explanation for the amazing generalization powers of the human 
 
 ***
 
-## Evolution
+Evolution
 
 Baum starts chapter 5 by discussing the problem evolution solved in abstract terms.
 
@@ -60,7 +61,7 @@ However, as an intuition pump I find this thought experiment very intriguing. It
 
 What sort of an algorithm for this problem could have such low computational complexity, e.g.  O(n^4)? Well if we relax the constraint that we must find the absolute best short program then it’s reasonable to suppose one could do it with some kind of hill-climbing procedure. Of course, in very rough terms this is clearly how evolution works.
 
-## Hill Climbing
+Hill Climbing
 
 Hill climbing is the only way that simple systems can become complex systems without anything getting injected from the outside. As humans we can design complex systems from scratch, but that’s only because we are the result of a very long process of hill climbing which began from extremely simple systems.
 
@@ -68,13 +69,41 @@ Clearly hill climbing is more efficient than random search because it makes use 
 
 Baum explains very nicely another reason why hill climbing is so effective:  “[Hill climbing] essentially does credit assignment on each change of candidate solutions. That is, when the algorithm makes a change in one or a few components of a big complicated solution, say a program or a neural net, it evaluates whether the change is good in the context of the rest of its current choices of all the other parameter values in the system…In this way it assigns credit to that particular choice of component, in the context of the whole solution.” pg. 120
 
-## Meta-Learning Stacks
-
-Forthcoming…
-
 ***
 
-## Notes on Interesting Ideas
+Meta-Learning Stacks
+
+“Biological evolution seems to have done some things that may be more powerful than ordinary hill climbing. It seems to have learned better how to learn as it went along.
+
+For example, evolution discovered regulatory circuits involving Hox genes and other toolkit genes that seem to have semantic meaning, for example, the ey gene, which essentially codes “build an eye here.”…
+
+Having discovered such semantic units… evolution then continued to explore how to swap these units around in meaningful ways. So, most of the evolution of different body plans since at least the origin of bilaterally symmetric animals appears to have been learning how to regulate the existing meaningful genes…
+
+We can imagine that this kind of search can be extremely powerful. Instead of trying various meaningless base changes, almost all of which do nothing useful, evolution effectively searched over combinations of meaningful macros. Add long legs… Try a shell… Take the brain and scale it up…
+
+There is another way evolution may have evolved to evolve better. Evolution may have discovered earlier, and at a lower level, that if introns were added into genes at appropriate locations, crossover would swap around building blocks, leading to semantically sensible searches and thus speeding up evolution.” pg. 120-121
+
+Baum notes that this last point is (or was) somewhat controversial at the time of his writing. But he provides a very clear argument that there is pressure for evolution to generate mechanisms of this sort:
+
+“…evolution does select for ability to learn to adapt better to future circumstances…The ancient genes that would have survived to the present are those in creatures able to evolve new solutions to outcompete other creatures and to survive the massive environmental insults that we believe occurred on many occasions in the history of life on earth. At any given time, evolution has selected for genomes that have solve numerous learning problems in their past, and it is a tenet of machine learning and a basis of the arguments in this book that if a compact solution solves a large class of learning problems, it can be expected to be good at solving learning problems in that class which it has not yet encountered. Thus, I expect evolution evolves mechanisms that are good for evolving solutions.” pg. 122
+
+Another mechanism he discusses in this vein is the existence of sex:
+
+“…sex speeds up evolution’s information acquisition (learning) and allows the survival of much higher mutation rates.” pg. 122
+
+What do all of these mechanisms have in common? They are forms of meta-learning within the evolutionary process. That is, they are mechanisms which accelerate the discovery of fit genomes. Furthermore, they are mechanisms that are themselves evolved.
+
+Baum does not use the term ‘meta-learning stacks’, but I find it evocative in thinking about the process which produced us. Many forms of meta-learning had to be discovered from scratch and stacked on top of each other to produce human civilization in such a short time. There are several forms of meta-learning stacked on top of each other within the process of biological evolution but also likely within the learning algorithms of the human brain and within human culture (e.g. language).
+
+Baum reflects on how the learning procedure of evolution differs from machine learning:
+
+“If only backpropagation is done on a network, there is inherently no way to discover sex or language. There is no way to even express changes in the learning procedure in the representation being used. But evolution, by contrast, is manipulating such a powerful representation that it has the capability of learning higher-level structure to improve its learning…
+
+[Furtheremore], evolution is benefiting from throwing truly massive computational resources at the problem. Evolution worked for billions of years before discovering structures such as Hox genes and the networks that render them meaningful.” pg. 123
+
+Reflecting on this has changed my view on how AGI is likely to be created. Discovery of the sort of compact structure required to build general intelligence is likely going to require massive computational search mediated by meta-learning at several levels in the process. This is reminiscent of Richard Sutton’s essay [“The Bitter Lesson”](http://www.incompleteideas.net/IncIdeas/BitterLesson.html).
+
+Notes on Interesting Ideas
 
 Ch 1
 
