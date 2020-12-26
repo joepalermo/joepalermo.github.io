@@ -28,7 +28,7 @@ The compactness of the model is key because it is the only thing which guarantee
 
 In chapter 5, Baum very roughly estimates that evolution ran through on the order of 10^35 creatures in the process that lead to humans. Of course, to simulate the outcome of the lifetime of a single creature requires many, many more orders of magnitude in computation. Clearly the amount of computation utilized by evolution dwarfs the size of the genome. Yet, the genome  represents a meaningful compression of the results of that computation.
 
-Therein lies the explanation for the amazing generalization powers of the human mind. Evolution has produced amazingly compact programs which are capable of generating creatures that can survive and thrive in our world. The compactness of the program compared to the amount of computation that was spent to produce it is what guarantees generality. Of course, this alone does not account for the specific quality of human intelligence as opposed to the myriad forms of animal intelligence. The unique qualities of human intelligence require further explanation which Baum expounds on in later chapters.
+Therein lies the explanation for the amazing generalization powers of the human mind. Evolution has produced amazingly compact programs which are capable of generating creatures that can survive and thrive in our world. The compactness of the program compared to the amount of computation that was spent to produce it is what confers generality. Of course, this alone does not account for the specific quality of human intelligence as opposed to the myriad forms of animal intelligence. The unique qualities of human intelligence require further explanation which Baum expounds on in later chapters.
 
 ## Evolution
 
