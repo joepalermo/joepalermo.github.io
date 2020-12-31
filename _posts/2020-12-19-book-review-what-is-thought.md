@@ -1,4 +1,7 @@
-WORK-IN-PROGRESS :)
+---
+layout: post
+title: Book Review - What is Thought?
+---
 
 ## Introduction
 
@@ -12,7 +15,7 @@ The book follows the example of a similar book published by the famous physicist
 
 Having read Baum’s book I’ve been awakened to the notion that understanding evolution in detail can potentially be helpful to the AI researcher. Knowing what was required for evolution to discover how to build intelligent systems can potentially give us clues about the path ahead in AI. However this is not just a book about evolution, and Baum digs into results from a wide array of disciplines to shed light on the problem.
 
-In this review I will touch upon the key ideas and takeaways that most excite me.
+In this review I will touch upon some of the key ideas and takeaways that most excite me.
 
 ## The Core Theme
 

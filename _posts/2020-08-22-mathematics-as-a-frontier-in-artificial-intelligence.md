@@ -1,3 +1,8 @@
+---
+layout: post
+title: Mathematics as a Frontier in Artificial Intelligence
+---
+
 I believe that building systems that can do mathematics is one of the most exciting frontiers of AI today.
 
 There are a few reasons:
