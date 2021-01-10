@@ -123,7 +123,7 @@ So-called *good old fashioned AI* or *GOFAI* failed to solve problems like objec
 
 *"You can use program synthesis to solve problems from very few examples, unlike deep learning, but the set of possible programs that you can build grows combinatorially with problem size."*
 
-*"Program synthesis, and in particular genetic programming, has been pretty successful on ARC..."*, although he does temper this by alluding to the fact that the best results achieved thus far are very far from optimal (the best error rate on the [2020 Kaggle competition](https://www.kaggle.com/c/abstraction-and-reasoning-challenge/leaderboard) was 79.4%.
+*"Program synthesis, and in particular genetic programming, has been pretty successful on ARC..."*, although he does temper this by alluding to the fact that the best results achieved thus far are very far from optimal (the best error rate on the [2020 Kaggle competition](https://www.kaggle.com/c/abstraction-and-reasoning-challenge/leaderboard) was 79.4%).
 
 He notes that all of the top solutions to ARC so far are based on program search over a DSL, with heuristics to make search more efficient. *"even though they're very primitive they remain infinitely more successful than deep learning on ARC problems."*
 
