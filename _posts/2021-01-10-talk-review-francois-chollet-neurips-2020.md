@@ -101,7 +101,7 @@ Deep learning is good at value-centric abstraction.
 
 *"...Deep learning is about relating samples to each other via a learned distance function, which implicitly defines a manifold."*
 
-So-called *good old fashioned AI"* or *GOFAI* failed to solve problems like object recognition or speech recognition because programs written by hand can't handle the combinatorial explosion of possible inputs. However, it turned out that deep learning models can be trained to project images, speech, and natural language onto continuous manifolds. If any input from the distribution in question can be placed neatly onto a learned manifold, then linear layers can easily be trained to draw decision boundaries through the manifold.
+So-called *good old fashioned AI* or *GOFAI* failed to solve problems like object recognition or speech recognition because programs written by hand can't handle the combinatorial explosion of possible inputs. However, it turned out that deep learning models can be trained to project images, speech, and natural language onto continuous manifolds. If any input from the distribution in question can be placed neatly onto a learned manifold, then linear layers can easily be trained to draw decision boundaries through the manifold.
 
 *"Program-centric abstraction, on the other hand, is about comparing discrete programs, which is to say graphs, and rather than computing distances you are looking for subgraph isomorphisms. And that's similar to human reasoning, planning, it's also what software engineers do..."*
 
