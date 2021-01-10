@@ -3,7 +3,7 @@ layout: post
 title: Talk Review - Francois Chollet's Neurips 2020 Talk
 ---
 
-I've been finding Francois Chollet's line of thinking on the nature of intelligence since his 2019 paper "The Measure of Intelligence" to be very insightful. This is my attempt to both walk through the ideas from his latest talk at Neurips 2020, and also to synthesize a fuller understanding of his thesis and where I agree and/or disagree. Note that this is not intended as a tutorial on Chollet's ideas, merely my own reflections on them.
+I've been finding Francois Chollet's line of thinking on the nature of intelligence since his 2019 paper "The Measure of Intelligence" to be very insightful. This is my attempt to both walk through the ideas from his latest talk at Neurips 2020, and also to synthesize a fuller understanding of his thesis. Note that this is not intended as a tutorial on Chollet's ideas, merely my own reflections on them.
 
 The title of this talk is *"Why abstraction is the key to intelligence, and what we're still missing"*.
 
@@ -70,11 +70,34 @@ In his talk Chollet briefly introduces his dataset and challenge problem for AI 
 
 ## II. Abstraction is the key to generalization
 
-After the failures of so-called *good old fashioned AI"* or *GOFAI*, it's been amazing to see how rapidly AI has progressed in the last decade. *GOFAI* failed to solve problems like object recognition or speech recognition because programs written by hand can't handle the combinatorial explosion of possible inputs. However, it turned out that deep learning models could be trained to project images, speech, and natural language onto continuous manifolds. If any input from the distribution in question can be placed neatly onto a learned manifold, then linear layers can easily be trained to draw decision boundaries through the manifold.
+*"By now you should have a pretty good ideas why we should focus on achieving broad generalizable cognitive abilities rather than task-specific skills, and this brings us to the problem of abstraction. Abstraction and generalization are closely tied because abstraction is the engine through which you produce generalization."*
 
+*"An interesting observation about the universe, which applies to pretty much any problem domain you can think of, is that it is made of any different things that are all similar, all analogous to each other. So we are surrounded by isomorphisms, and I call this the kaleidoscope hypothesis...[a kaleidoscope] is a tube with a few bits of colored glass in it, which are repeated and amplified by a set of mirrors. And it creates a remarkable richness of complex patterns out of just a couple of kernels of original information, which are the bits of colored glass..."*
 
+*"Generalization is the ability to mine the experience that you have to identify bits that are reusable. And you extract those bits and you call them abstractions, and they take the form of programs and representations and you reuse them to make sense of novel situations."*
 
-TODO REMOVE:
-He also distinguishes *system-centric generalization* (the ability of a system to generalize from its past experience) from *developer-aware generalization* (the ability of a system to generalize beyond what its developer anticipated).
-less powerful generalization => more powerful generalization
-system-centric generalization => developer-aware generalization
+*"So how do you identify reusable kernels of structure? Simply by noticing when two things similar, by noticing analogies. Because if something is repeated twice, then both instances of that thing must have a single origin, like in a kaleidoscope."*
+
+*"So intelligence, which is to say, generalization power, is literally sensitivity to abstract analogies, and that's in fact all there is to it. Intelligence is sensitivity to analogies. So if you have a very high sensitivity to analogies, you will be able to extract powerful abstractions from little experience. And you will be able to use these abstractions to operate in a maximally large area of future experience space. You will be maximally efficient in converting past experience into the ability to handle future novelty."*
+
+Now Chollet gets into more detail on what he means by abstraction.
+
+*"There are two key categories of abstractions that we're interested in in this talk: value-centric abstraction and program-centric abstraction...they're pretty similar to each other: both of them are about comparing things and merging individual instances into common abstractions by eliminating certain details about these instances. But there's a key difference, which is that one of them operates over a continuous domain and the other over a discrete domain."*
+
+*Value-centric abstraction* (or *"value-analogy"*) is the one that operates over a continuous domain and *program-centric abstraction* (*"program-analogy"*) is the one that operates over a discrete domain.
+
+Deep learning is good at value-centric abstraction.
+
+*"Value-analogy is geometrically grounded... you compare instances via a distance function, and you create abstractions by merging instances that are similar into a prototype."*
+
+*"Deep learning excels at [value-analogy] which makes sense because deep learning models are continuous, in fact, they are differentiable parametric models. So it's intuitive you would be able to produce abstractions that are grounded in geometry using deep learning. In supervised deep learning, what you're doing is [creating] an analogy between two spaces...you are learning a smooth geometric morphing between the two spaces, point by point. So it's a geomtric analogy between two spaces, and that's really what a deep learning model encodes, it's this space to space analogy."*
+
+*"...Deep learning is about relating samples to each other via a learned distance function, which implicitly defines a manifold."*
+
+So-called *good old fashioned AI"* or *GOFAI* failed to solve problems like object recognition or speech recognition because programs written by hand can't handle the combinatorial explosion of possible inputs. However, it turned out that deep learning models can be trained to project images, speech, and natural language onto continuous manifolds. If any input from the distribution in question can be placed neatly onto a learned manifold, then linear layers can easily be trained to draw decision boundaries through the manifold.
+
+*"Program-centric abstraction, on the other hand, is about comparing discrete programs, which is to say graphs, and rather than computing distances you are looking for subgraph isomorphisms. And that's similar to human reasoning, planning, it's also what software engineers do..."*
+
+*"Program-analogy is topologically grounded. If you compare the structure of two graphs, and you create abstractions by merging instances that are isomorphic into an abstract program"*
+
+According to Chollet, *"...all intelligence arises from a combination of these two forms of abstraction."* This is not as profound a claim as it at first seems if one allows that we can divide the world into continuous domains and discrete domains, and that both domains require a distinct form of abstraction.
