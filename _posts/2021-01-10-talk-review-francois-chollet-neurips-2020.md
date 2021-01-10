@@ -12,9 +12,13 @@ The title of this talk is *"Why abstraction is the key to intelligence, and what
 The presentation outline was as follows:
 
 I. To make progress towards AI, we need to measure & maximize generalization
+
 II. Abstraction is the key to generalization
+
 III. Capabilities & limits of Deep Learning with regard to abstraction
+
 IV. Discrete program search: how to learn to reason
+
 V. The road ahead: bridging both worlds
 
 ## I. To make progress towards AI, we need to measure & maximize generalization
@@ -26,8 +30,11 @@ In that paper he defined intelligence as: *"The intelligence of a system is a me
 In other words, one can say very roughly that intelligence is the ability to acquire new skills with as little in the way of priors or experience as possible. However, there are several axes to consider here:
 
 1 - *What tasks* are in scope?
+
 2 - *How useful* are the learned skills at solving those tasks? i.e. how well can they 'solve' the tasks.
+
 3 - *How much* prior knowledge and experience was used to acquire those skills?
+
 4 - *How hard* is it to generalize from the priors and experience to the learned skills?
 
 Chollet also refers to intelligence as a "conversion ratio" between priors & experience into skills. *"The Measure of Intelligence"* also includes a lengthy section that formalizes this with algorithmic information theory.
