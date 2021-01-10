@@ -115,6 +115,8 @@ Deep learning is good at value-centric abstraction.
 
 So-called *good old fashioned AI* or *GOFAI* failed to solve problems like object recognition or speech recognition because programs written by hand can't handle the combinatorial explosion of possible inputs. However, it turned out that deep learning models can be trained to project images, speech, and natural language onto continuous manifolds. If any input from the distribution in question can be placed neatly onto a learned manifold, then linear layers can easily be trained to draw decision boundaries through the manifold.
 
+## IV. Discrete program search: how to learn to reason
+
 *"So how do you solve these problems like ARC, sorting a list, finding prime numbers, etc...? Any reasoning and planning problem. The answer is simple, it’s program synthesis. Which is to say combinatorial search over graphs of operators taken from a domain specific language (DSL). Discrete search over graphs."*
 
 *"You can draw an analogy between ML and program synthesis. In ML, your model is a differentiable parametric function, and in program synthesis, it's a graph of ops from a DSL. In ML, your learning engine is SGD, and in program synthesis it's combinatorial search. In machine learning the key obstacle is that you need a dense sampling of your problem manifold, and in program synthesis the key challenge is combinatorial explosion."*
@@ -151,4 +153,16 @@ Returning back to the discussion on program synthesis, Chollet notes:
 
 This is much more familiar to me as it is precisely the use of deep learning in systems like AlphaZero. It is also present in virtually all of the work on automated theorem proving with machine learning. See for instance [GPT-F](https://arxiv.org/abs/2009.03393) which utilizes a GPT-like language model to make proof search tractable.
 
----
+## V. The road ahead: bridging both worlds
+
+*"...there are two exciting research areas to combine the strengths of deep learning with the strengths of program synthesis. The first one is: discrete programs that incorporate deep learning components. And the second one is: deep learning models that inform discrete search and that improve its efficiency instead of using hard-coded heuristics. So this kinda assumes that the space of possible heuristics is an interpolative manifold on which you can do gradient descent."*
+
+*"...[program synthesis can leverage] deep learning in two ways. You can use it as a kind of perception layer to parse a situation into discrete building blocks that you can feed to a program synthesis engine... [i.e.] you can incorporate deep learning as a building block of your DSL. And the second way is that you can use deep learning as a driver, as a guide, for program synthesis..."*
+
+If you've been reading everything up to this point, those last 2 paragraphs aren't too surprising, but the vision it implies certainly surprised me:
+
+*"In the future, I believe we're gonna move towards hybrid systems that will combine deep learning and program search. It will be mostly program search, but it would be deep learning driven."*
+
+*"So this leads us to a long term vision for the future of AI and deep learning that closely resembles the workflow of software engineers today... If you want to know what the future of AI will look like, just look at software engineers today... AI will evolve along the lines of creating new programs from an existing global library of abstract primitives that is going to be shared across many different problems. So you'd have a stream of tasks [e.g. ARC tasks] and for each task you will have a program synthesis engine that is capable of assembling a task-specific solution...That will involve deep learning perception modules, so for instance, parsing objects from the input grid of an ARC task, but also algorithmic modules. And this task-specific solution program will be assembled by this program synthesis engine... This program synthesis engine will not just produce a solution program to your current task, it will also generate reusable building blocks as a by-product of the search... Some of these building blocks will be deep learning modules generated via value-centric abstraction (trained offline on lots of data), some of them will be algorithmic modules obtained via program-centric abstraction, by noticing graph isomorphisms in different functions inside [solution programs]... All these building blocks will form an ever-growing DSL."*
+
+***"So in the future we're going to be moving towards lifelong-learning hybrid systems that combine deep learning and program search."***
