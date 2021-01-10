@@ -60,15 +60,17 @@ Note that priors *determine* generalization ability, and therefore determine how
 
 The field of AI has been focused on the outputs of intelligence, producing the programs that implement specific skills. In Chollet's view, if our goal is to produce intelligence, then this is an error because there are always shortcuts to produce such programs that don't correspond to progress towards building intelligent systems. For example, the shortcut of building-in domain specific priors, i.e. human defined abstractions that simplify a problem, or the shortcut of using massive amounts of experience.
 
----
+In his talk Chollet briefly introduces his dataset and challenge problem for AI researchers, the *"Abstract Reasoning Corpus (ARC)"*. ARC is a task which Chollet designed to require only a subset of *"Core Knowledge"*
 
-After the failures of the so-called *good old fashioned AI"* or *GOFAI*, it's been amazing to see how rapidly AI has progressed in the last decade. *GOFAI* failed to solve problems like object recognition or speech recognition because programs written by hand can't handle the combinatorial explosion of possible inputs. However, it turned out that deep learning models could be trained to project images, speech, and natural language onto continuous manifolds. If any input from the distribution in question can be placed neatly onto a learned manifold, then linear layers can easily be trained to draw decision boundaries through the manifold.
+*"Core Knowledge is basically the set of innate cognitive priors possessed by humans, which guide our ability to learn throughout our lives [and] form the atomic building blocks of thinking..."*
 
+*"Core Knowledge systems are innate, or at least they emerge very early which is basically the same for all intents and purposes. They're ancient. So we find them in non human primates and you also find some of them in different animals, like birds for instance."*
 
+*Core Knowledge* is the name of a theory developed by psychologist Elizabeth Spelke which [states in essence](https://www.harvardlds.org/wp-content/uploads/2017/01/SpelkeKinzler07-1.pdf): *"Human cognition is founded, in part, on four systems for representing objects, actions, number, and space..."*. In Chollet's talk he also references two other domains of Core Knowlege pertaining to "locations" and "social partners", but they aren't used in ARC.
 
 ## II. Abstraction is the key to generalization
 
-
+After the failures of so-called *good old fashioned AI"* or *GOFAI*, it's been amazing to see how rapidly AI has progressed in the last decade. *GOFAI* failed to solve problems like object recognition or speech recognition because programs written by hand can't handle the combinatorial explosion of possible inputs. However, it turned out that deep learning models could be trained to project images, speech, and natural language onto continuous manifolds. If any input from the distribution in question can be placed neatly onto a learned manifold, then linear layers can easily be trained to draw decision boundaries through the manifold.
 
 
 
