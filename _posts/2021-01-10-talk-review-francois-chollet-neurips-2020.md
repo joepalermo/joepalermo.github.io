@@ -17,6 +17,8 @@ III. Capabilities & limits of Deep Learning with regard to abstraction
 IV. Discrete program search: how to learn to reason
 V. The road ahead: bridging both worlds
 
+## I. To make progress towards AI, we need to measure & maximize generalization
+
 Chollet begins by defining generalization and his definition won't surprise you. He defines it as *"the ability to handle situations (or tasks) that differ from previously encountered situations"*. He then proceeds to introduce a simple hierarchy of the forms of generalization (from no generalization at all to *"extreme"* generalization) that he introduced originally in his paper *"The Measure of Intelligence"*.
 
 In that paper he defined intelligence as: *"The intelligence of a system is a measure of its skill-acquisition efficiency over a scope of tasks, with respect to priors, experience, and generalization difficulty."*
@@ -38,9 +40,25 @@ The field of AI post the deep-learning revolution seems to have the opposite obs
 
 In Chollet's view, task-specific skills can't tell you anything about an agent's intelligence, because it is possible to *"buy arbitrary performance"* by simply defining better priors or utilizing more experience. *"[Defining better priors or training from more experience] reduces uncertainty and novelty and thus reduces the need for generalization."*
 
-One thing that confuses me about this is that that priors, i.e. inductive biases, are the only thing that makes generalization possible. Generalization ability actually comes from priors. Chollet as it turns out also agrees with this as he notes in *TMOI*, *"...priors are not a limitation to our generalization capabilities; to the contrary, they are their source, the reason why humans are capable of acquiring certain categories of skills with remarkable efficiency."*
+One thing that used to confuse me about this is that that priors, i.e. inductive biases, are the only thing that makes generalization possible. Generalization ability actually comes from priors. Chollet as it turns out also agrees with this as he notes in *TMOI*, *"...priors are not a limitation to our generalization capabilities; to the contrary, they are their source, the reason why humans are capable of acquiring certain categories of skills with remarkable efficiency."* So what does it mean to say that we need to measure and adjust for priors? The answer is that we only need to account for domain-specific priors, also known as *"knowledge priors"*.
 
-But if we take this view then priors *determine* generalization ability, and therefore determine how much experience will be needed to acquire a given skill. If we interpret priors as simply everything required to specify the initial state of a system, then this is surely true. Thought about this way, the problem of AI is thus to define (and/or meta-learn) the right priors such that relatively small amounts of experience are sufficient to acquire *any* conceivable skill, i.e. program.
+There is in fact a spectrum of possible priors. We tend to think of priors as domain-specific heuristics, for example the use of endgame tables in chess playing, or even merely encoding the rules of a game into an agent. However, there are also more general and abstract priors. For example, Chollet makes ample reference to *"human cognitive priors"*.
+
+*"Human cognitive priors come in multiple forms, in particular:"*
+
+- *"Low-level priors about the structure of our own sensorimotor space, e.g. reflexes such as the vestibulo-ocular reflex, the palmar grasp reflex, etc. These priors enable infants (including prior to birth) to quickly take control of their senses and bodies, and may even generate simple behaviors in a limited range of situations."*
+
+- *"Meta-learning priors governing our learning strategies and capabilities for knowledge acquisition. This may include, for instance, the assumption that information in the universe follows a modular-hierarchical structure, as well as assumptions regarding causality and spatio-temporal continuity."*
+
+- *"High-level knowledge priors regarding objects and phenomena in our external environment. This may include prior knowledge of visual objectness (what defines an object), priors about orientation and navigation in 2D and 3D Euclidean spaces, goal- directedness (expectation that our environment includes agents that behave according to goals), innate notions about natural numbers, innate social intuition (e.g. theory of mind), etc."*
+
+*"When it comes to creating artificial human-like intelligence, low-level sensorimotor priors are too specific to be of interest (unless one seeks to build an artificial human body). While human meta-learning priors should be of the utmost interest (understanding the strategies that the brain follows to turn experience into knowledge and skills is effectively our end goal), these priors are not relevant to evaluating intelligence: they are intelligence, rather than a third-party modulating factor to be controlled for. They are part of the black box that we seek to characterize."*
+
+*"It is knowledge priors that should be accounted for when measuring a human-like form of intelligence. A system that does not possess human innate knowledge priors would be at a critical disadvantage compared to humans when it comes to efficiently turning a given experience curriculum into skill at a given human task. Inversely, a system that has access to more extensive hard-coded knowledge about the task at hand could not be fairly compared to human intelligence*"
+
+Note that priors *determine* generalization ability, and therefore determine how much experience will be needed to acquire a given skill. If we interpret priors as simply everything required to specify the initial state of a system, then this is surely true. Thought about this way, the problem of AI is thus to define (and/or meta-learn) the right priors such that relatively small amounts of experience are sufficient to acquire *any* conceivable skill. Note that we can think of skills as programs.
+
+The field of AI has been focused on the outputs of intelligence, producing the programs that implement specific skills. In Chollet's view, if our goal is to produce intelligence, then this is an error because there are always shortcuts to produce such programs that don't correspond to progress towards building intelligent systems. For example, the shortcut of building-in domain specific priors, i.e. human defined abstractions that simplify a problem, or the shortcut of using massive amounts of experience.
 
 ---
 
@@ -48,7 +66,7 @@ After the failures of the so-called *good old fashioned AI"* or *GOFAI*, it's be
 
 
 
-
+## II. Abstraction is the key to generalization
 
 
 
