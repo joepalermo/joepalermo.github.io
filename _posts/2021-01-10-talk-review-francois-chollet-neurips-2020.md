@@ -101,7 +101,31 @@ Deep learning is good at value-centric abstraction.
 
 *"...Deep learning is about relating samples to each other via a learned distance function, which implicitly defines a manifold."*
 
+*"Value-based abstraction relates to the manifold hypothesis in machine learning. The manifold hypothesis posits that all natural data lies on a low-dimensional manifold within the high-dimensional space where it is encoded, and as far as we know, it's accurate for pretty much any perception problem... And the manifold hypothesis also implies that within one of these manifolds it's always possible to interpolate between any two inputs... And the ability to interpolate between samples is the key to understanding generalization in deep learning. It's the reason why deep learning works... [you can] make sense of points you've never seen before by relating them to other points that lie close to them on the manifold."*
+
+*"This is effective for perception problems but it has limitations. It's brittle. It's sensitive to small perturbations. And that's because it's a point by point mapping between two spaces and if you shift one of the spaces slightly, the mapping that was learned breaks down. That's where you start seeing that topology based abstraction is more powerful than geometry-based abstraction, because distances are not robust to small perturbations but structure is robust to small perturbations. And there's an even bigger limitation which is that for geometry-based abstraction to even be relevant, you need to be dealing with a continuous domain. So you cannot apply deep learning to discrete problems like sorting a list, for instance, or finding prime numbers...you cannot solve these problems with continuous optimization because they have a discrete structure, fundamentally... You could always try embedding that discrete structure in a continuous manifold, but you couldn't use that manifold for interpolation. So your continuous parametric model could not generalize to things it has not seen before. So in order to learn a useful embedding you would need an exhaustive sampling of the problem space."*
+
+*"So the take away here is that in order for deep learning to be relevant for a given problem, you need two things:"*
+
+- *"The data points fit on a manifold where interpolation is meaningful (i.e. the manifold hypothesis applies)"*
+
+- *"There is a dense sampling of this manifold available (i.e. lots of training data)"*
+
 So-called *good old fashioned AI* or *GOFAI* failed to solve problems like object recognition or speech recognition because programs written by hand can't handle the combinatorial explosion of possible inputs. However, it turned out that deep learning models can be trained to project images, speech, and natural language onto continuous manifolds. If any input from the distribution in question can be placed neatly onto a learned manifold, then linear layers can easily be trained to draw decision boundaries through the manifold.
+
+*"So how do you solve these problems like ARC, sorting a list, finding prime numbers, etc...? Any reasoning and planning problem. The answer is simple, it’s program synthesis. Which is to say combinatorial search over graphs of operators taken from a domain specific language (DSL). Discrete search over graphs."*
+
+*"You can draw an analogy between ML and program synthesis. In ML, your model is a differentiable parametric function, and in program synthesis, it's a graph of ops from a DSL. In ML, your learning engine is SGD, and in program synthesis it's combinatorial search. In machine learning the key obstacle is that you need a dense sampling of your problem manifold, and in program synthesis the key challenge is combinatorial explosion."*
+
+*"You can use program synthesis to solve problems from very few examples, unlike deep learning, but the set of possible programs that you can build grows combinatorially with problem size."*
+
+*"Program synthesis, and in particular genetic programming, has been pretty successful on ARC..."*, although he does temper this by alluding to the fact that the best results achieved thus far are very far from optimal (the best error rate on the [2020 Kaggle competition](https://www.kaggle.com/c/abstraction-and-reasoning-challenge/leaderboard) was 79.4%.
+
+He notes that all of the top solutions to ARC so far are based on program search over a DSL, with heuristics to make search more efficient. *"even though they're very primitive they remain infinitely more successful than deep learning on ARC problems."*
+
+At first blush it sounds like Chollet is suggesting a return to GOFAI, but that's not what Chollet is advocating.
+
+---
 
 *"Program-centric abstraction, on the other hand, is about comparing discrete programs, which is to say graphs, and rather than computing distances you are looking for subgraph isomorphisms. And that's similar to human reasoning, planning, it's also what software engineers do..."*
 
