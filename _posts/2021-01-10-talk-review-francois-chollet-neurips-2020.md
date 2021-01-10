@@ -93,6 +93,8 @@ Now Chollet gets into more detail on what he means by abstraction.
 
 *Value-centric abstraction* (or *"value-analogy"*) is the one that operates over a continuous domain and *program-centric abstraction* (*"program-analogy"*) is the one that operates over a discrete domain.
 
+## III. Capabilities & limits of Deep Learning with regard to abstraction
+
 Deep learning is good at value-centric abstraction.
 
 *"Value-analogy is geometrically grounded... you compare instances via a distance function, and you create abstractions by merging instances that are similar into a prototype."*
@@ -123,12 +125,30 @@ So-called *good old fashioned AI* or *GOFAI* failed to solve problems like objec
 
 He notes that all of the top solutions to ARC so far are based on program search over a DSL, with heuristics to make search more efficient. *"even though they're very primitive they remain infinitely more successful than deep learning on ARC problems."*
 
-At first blush it sounds like Chollet is suggesting a return to GOFAI, but that's not what Chollet is advocating.
+At first blush it sounds like Chollet is suggesting a return to GOFAI, but that's not what Chollet is advocating. He recognizes that to utilize program synthesis, we need to grapple with the challenge of combinatorial explosion. So how do we do this?
+
+*"If you want to make something efficient, there's a universal recipe, which is that you introduce modularity and hierarchy...Deep learning is what you get when you add modularity and hierarchy to continuous optimization...if you hard code abstract module reuse in continuous optimization, then you get deep learning architecture patterns. For instance, convolution is a hard coded module which abstracts away spatial position. RNNs [are]... abstract with respect to the time axis..."*
+
+*"In general, there are two tools at your disposal to make program synthesis efficient. There's abstract function reuse [i.e. program-centric abstraction]... and making smarter branching decisions... and you can actually use deep learning there."*
+
+He continues by elaborating on the use of program-centric abstraction here:
+
+*"The general idea is that you start with a given DSL and you run program search to solve various problems, like ARC tasks, for instance, so you generate solution programs, and you start identifying subgraph isomorphisms, both within the program and across programs, and you abstract away these subprograms into reusable functions, and you add these functions back to the DSL, and you keep searching."*
+
+Of course this teaser paragraph above is really just the abstract for a research program, not a complete idea. Chollet provides no references and I'm not aware of any research that has made concrete steps in this direction.
+
+> In an earlier part of the talk Chollet provides this description of program-centric abstraction:
+
+> *"Program-centric abstraction, on the other hand, is about comparing discrete programs, which is to say graphs, and rather than computing distances you are looking for subgraph isomorphisms. And that's similar to human reasoning, planning, it's also what software engineers do..."*
+
+> *"Program-analogy is topologically grounded. If you compare the structure of two graphs, and you create abstractions by merging instances that are isomorphic into an abstract program"*
+
+> According to Chollet, *"...all intelligence arises from a combination of [value-centric and program-centric] abstraction."* This is not as profound a claim as it at first seems if one allows that we can divide the world into continuous domains and discrete domains, and that both domains require a distinct form of abstraction.
+
+Returning back to the discussion on program synthesis, Chollet notes:
+
+*"There's also a complementary and even more powerful way to improve program synthesis, and that is to merge program synthesis with deep learning, to leverage deep learning as a way to reduce the program search space and to fight combinatorial explosion."*
+
+This is much more familiar to me as it is precisely the use of deep learning in systems like AlphaZero. It is also present in virtually all of the work on automated theorem proving with machine learning. See for instance [GPT-F](https://arxiv.org/abs/2009.03393) which utilizes a GPT-like language model to make proof search tractable.
 
 ---
-
-*"Program-centric abstraction, on the other hand, is about comparing discrete programs, which is to say graphs, and rather than computing distances you are looking for subgraph isomorphisms. And that's similar to human reasoning, planning, it's also what software engineers do..."*
-
-*"Program-analogy is topologically grounded. If you compare the structure of two graphs, and you create abstractions by merging instances that are isomorphic into an abstract program"*
-
-According to Chollet, *"...all intelligence arises from a combination of these two forms of abstraction."* This is not as profound a claim as it at first seems if one allows that we can divide the world into continuous domains and discrete domains, and that both domains require a distinct form of abstraction.
