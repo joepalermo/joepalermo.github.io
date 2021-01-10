@@ -3,7 +3,7 @@ layout: post
 title: Talk Review - Francois Chollet's Neurips 2020 Talk
 ---
 
-I've been finding Francois Chollet's line of thinking on the nature of intelligence since his 2019 paper "The Measure of Intelligence" to be very insightful. This post is my attempt to walk through the ideas from his talk at Neurips 2020 and also to synthesize for myself a better understanding of his thesis. Note that this is not intended as a tutorial on Chollet's ideas, merely my own reflections on them.
+I've been finding Francois Chollet's line of thinking on the nature of intelligence since his 2019 paper "The Measure of Intelligence" to be very insightful. This post is my attempt to walk through the ideas from his (talk at Neurips 2020)[https://slideslive.com/38935790/abstraction-reasoning-in-ai-systems-modern-perspectives] and also to synthesize for myself a better understanding of his thesis. Note that this is not intended as a tutorial on Chollet's ideas, merely my own reflections on them.
 
 The title of this talk is *"Why abstraction is the key to intelligence, and what we're still missing"*.
 
