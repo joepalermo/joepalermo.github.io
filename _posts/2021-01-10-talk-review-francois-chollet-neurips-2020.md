@@ -66,7 +66,7 @@ In his talk Chollet briefly introduces his dataset and challenge problem for AI 
 
 *"Core Knowledge systems are innate, or at least they emerge very early which is basically the same for all intents and purposes. They're ancient. So we find them in non human primates and you also find some of them in different animals, like birds for instance."*
 
-*Core Knowledge* is the name of a theory developed by psychologist Elizabeth Spelke which [states in essence](https://www.harvardlds.org/wp-content/uploads/2017/01/SpelkeKinzler07-1.pdf): *"Human cognition is founded, in part, on four systems for representing objects, actions, number, and space..."*. In Chollet's talk he also references two other domains of Core Knowlege pertaining to "locations" and "social partners", but they aren't used in ARC.
+[*Core Knowledge*](https://www.harvardlds.org/wp-content/uploads/2017/01/SpelkeKinzler07-1.pdf) is the name of a theory developed by psychologist Elizabeth Spelke which states in essence: *"Human cognition is founded, in part, on four systems for representing objects, actions, number, and space..."*. In Chollet's talk he also references two other domains of Core Knowlege pertaining to "locations" and "social partners", but they aren't used in ARC.
 
 ## II. Abstraction is the key to generalization
 
