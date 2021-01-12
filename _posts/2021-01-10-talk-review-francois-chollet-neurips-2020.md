@@ -113,7 +113,11 @@ Deep learning is good at value-centric abstraction.
 
 - *"There is a dense sampling of this manifold available (i.e. lots of training data)"*
 
-So-called Good Old Fashioned AI (or GOFAI) failed to solve problems like object recognition or speech recognition because programs written by hand can't handle the combinatorial explosion of possible inputs. However, it turned out that deep learning models can be trained to project images, speech, and natural language onto continuous manifolds. If any input from the distribution in question can be placed neatly onto a learned manifold, then linear layers can easily be trained to draw decision boundaries through the manifold.
+So-called Good Old Fashioned AI (or GOFAI) failed to solve problems like object recognition or speech recognition because programs written by hand can't handle the combinatorial explosion of possible inputs.
+
+Perhaps the core lesson of the deep learning revolution is that for many forms of natural data, deep neural networks can be trained to project data points on to continuous manifolds. If any input from the distribution in question can be placed neatly onto a learned manifold, then linear layers can easily be trained to draw decision boundaries through the manifold.
+
+Chollet's point is that this trick only goes so far.
 
 ## IV. Discrete program search: how to learn to reason
 
@@ -127,7 +131,7 @@ So-called Good Old Fashioned AI (or GOFAI) failed to solve problems like object 
 
 He notes that all of the top solutions to ARC so far are based on program search over a DSL, with heuristics to make search more efficient. *"even though they're very primitive they remain infinitely more successful than deep learning on ARC problems."*
 
-At first blush it sounds like Chollet is suggesting a return to GOFAI, but that's not what Chollet is advocating. He recognizes that to utilize program synthesis, we need to grapple with the challenge of combinatorial explosion. So how do we do this?
+At first blush it sounds like Chollet is suggesting a return to GOFAI, but that's not what Chollet is advocating. He recognizes that to utilize program synthesis we need to grapple with the challenge of combinatorial explosion - precisely the challenge that toppled GOFAI. So how do we do this?
 
 *"If you want to make something efficient, there's a universal recipe, which is that you introduce modularity and hierarchy...Deep learning is what you get when you add modularity and hierarchy to continuous optimization...if you hard code abstract module reuse in continuous optimization, then you get deep learning architecture patterns. For instance, convolution is a hard coded module which abstracts away spatial position. RNNs [are]... abstract with respect to the time axis..."*
 
@@ -139,7 +143,7 @@ He continues by elaborating on the use of program-centric abstraction here:
 
 Of course this teaser paragraph above is really just the abstract for a research program, not a complete idea. Chollet provides no references and I'm not aware of any research that has made concrete steps in this direction.
 
-> In an earlier part of the talk Chollet provides this description of program-centric abstraction:
+In an earlier part of the talk Chollet provides this description of program-centric abstraction:
 
 > *"Program-centric abstraction, on the other hand, is about comparing discrete programs, which is to say graphs, and rather than computing distances you are looking for subgraph isomorphisms. And that's similar to human reasoning, planning, it's also what software engineers do..."*
 
