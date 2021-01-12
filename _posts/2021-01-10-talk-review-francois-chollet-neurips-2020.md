@@ -77,7 +77,7 @@ In his talk Chollet briefly introduces his dataset and challenge problem for AI 
 
 ## II. Abstraction is the key to generalization
 
-*"By now you should have a pretty good ideas why we should focus on achieving broad generalizable cognitive abilities rather than task-specific skills, and this brings us to the problem of abstraction. Abstraction and generalization are closely tied because abstraction is the engine through which you produce generalization."*
+*"By now you should have a pretty good idea why we should focus on achieving broad generalizable cognitive abilities rather than task-specific skills, and this brings us to the problem of abstraction. Abstraction and generalization are closely tied because abstraction is the engine through which you produce generalization."*
 
 *"An interesting observation about the universe, which applies to pretty much any problem domain you can think of, is that it is made of any different things that are all similar, all analogous to each other. So we are surrounded by isomorphisms, and I call this the kaleidoscope hypothesis...[a kaleidoscope] is a tube with a few bits of colored glass in it, which are repeated and amplified by a set of mirrors. And it creates a remarkable richness of complex patterns out of just a couple of kernels of original information, which are the bits of colored glass..."*
 
