@@ -99,7 +99,7 @@ Deep learning is good at value-centric abstraction.
 
 *"Value-analogy is geometrically grounded... you compare instances via a distance function, and you create abstractions by merging instances that are similar into a prototype."*
 
-*"Deep learning excels at [value-analogy] which makes sense because deep learning models are continuous, in fact, they are differentiable parametric models. So it's intuitive you would be able to produce abstractions that are grounded in geometry using deep learning. In supervised deep learning, what you're doing is [creating] an analogy between two spaces...you are learning a smooth geometric morphing between the two spaces, point by point. So it's a geomtric analogy between two spaces, and that's really what a deep learning model encodes, it's this space to space analogy."*
+*"Deep learning excels at [value-analogy] which makes sense because deep learning models are continuous, in fact, they are differentiable parametric models. So it's intuitive you would be able to produce abstractions that are grounded in geometry using deep learning. In supervised deep learning, what you're doing is [creating] an analogy between two spaces...you are learning a smooth geometric morphing between the two spaces, point by point. So it's a geometric analogy between two spaces, and that's really what a deep learning model encodes, it's this space to space analogy."*
 
 *"...Deep learning is about relating samples to each other via a learned distance function, which implicitly defines a manifold."*
 
