@@ -62,6 +62,6 @@ In any case, though models like BERT and GPT-3 are interesting and powerful if u
 
 My favourite example of a problem where geometric approaches (i.e. deep learning) don't work very well is the [DeepMind Mathematics Dataset](https://github.com/deepmind/mathematics_dataset).
 
-DeepMind and OpenAI have both trained fairly large transformer models on it, treating it as a sequence-to-sequence problem where the input is the question statement and the output is the answer. It's a testament to the power of deep learning that this works at all. If you restrict concern to the arithmetic problems it's like trying to implement a pocket calculator within the weights of a neural network. Yes, amazing that it kinda works, but I'm sure that the first systems that satisfactory solve this dataset won't look like that.
+DeepMind and OpenAI have [both](https://arxiv.org/abs/1904.01557) [trained](https://arxiv.org/abs/2010.14701) fairly large transformer models on it, treating it as a sequence-to-sequence problem where the input is the question statement and the output is the answer. It's a testament to the power of deep learning that this works at all. If you restrict concern to the arithmetic problems it's like trying to implement a pocket calculator within the weights of a neural network. Yes, amazing that it kinda works, but I'm quite confident that the first systems that satisfactory solve this dataset won't look like that.
 
-I believe that the right way to solve this problem is via program synthesis. That's also how humans do it. 
+I believe that the right way to solve this problem is via program synthesis. That's also how humans do it.
