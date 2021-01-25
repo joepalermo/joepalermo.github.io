@@ -64,4 +64,10 @@ My favourite example of a problem where geometric approaches (i.e. deep learning
 
 DeepMind and OpenAI have [both](https://arxiv.org/abs/1904.01557) [trained](https://arxiv.org/abs/2010.14701) fairly large transformer models on it, treating it as a sequence-to-sequence problem where the input is the question statement and the output is the answer. It's a testament to the power of deep learning that this works at all. If you restrict concern to the arithmetic problems it's like trying to implement a pocket calculator within the weights of a neural network. Yes, amazing that it kinda works, but I'm quite confident that the first systems that satisfactory solve this dataset won't look like that.
 
-I believe that the right way to solve this problem is via program synthesis. That's also how humans do it.
+I believe that the right way to solve this problem is via program synthesis.
+
+Notably that's also how humans do it. When you look at problems like these you'll first figure out what the problem is asking for, then you'll compose a sequence of symbolic computations which produce the answer. In other words you'll construct an algorithm to compute the answer. In fact, you might get the algorithm right and yet make mistake in the calculation (since you're not a computer).
+
+For computers, the calculation part is trivial. It's the construction of algorithm for each problem which is the interesting challenge.
+
+Once you define a set of operators that can be composed to construct a program in the form of a compute graph, the problem reduces to a form of search. Here deep learning can become useful again. As Chollet notes: *"...there are two exciting research areas to combine the strengths of deep learning with the strengths of program synthesis. The first one is: discrete programs that incorporate deep learning components. And the second one is: deep learning models that inform discrete search and that improve its efficiency instead of using hard-coded heuristics."*
