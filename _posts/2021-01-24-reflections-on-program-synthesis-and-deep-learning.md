@@ -7,7 +7,7 @@ title: Reflections on Program Synthesis and Deep Learning
 
 I've come to view program synthesis as a powerful framework for advancing AI. Program synthesis is the endeavour to build systems that construct programs that solve specific problems on demand, just as a human programmer does.
 
-Ultimately the problem of AI is how to build intelligent computational systems. The question of what exactly we mean by intelligence is crucial. Let us suppose that the intelligence of a system is as Francois Chollet [claims](https://joepalermo.github.io/2021/01/10/talk-review-francois-chollet-neurips-2020.html): *"a measure of skill-acquisition efficiency over a scope of tasks, with respect to priors, experience, and generalization difficulty."* What exactly are these "skills" that our systems are supposed to acquire? Well they're software programs of course!
+The problem of AI is how to build intelligent computational systems, which of course raises the question of what exactly we mean by intelligence. Let us suppose that the intelligence of a system is as Francois Chollet [claims](https://joepalermo.github.io/2021/01/10/talk-review-francois-chollet-neurips-2020.html): *"a measure of skill-acquisition efficiency over a scope of tasks, with respect to priors, experience, and generalization difficulty."* What exactly are these "skills" that our systems are supposed to acquire? Well they're software programs of course!
 
 Framed this way, it's obvious that if we construe program synthesis broadly, then artificial intelligence and program synthesis are the same problem.
 
@@ -58,11 +58,11 @@ One could add some of the recent accomplishments with large pre-trained language
 
 DALL-E was a recent and amazing step in this direction. I was as many people have been [shocked](https://twitter.com/karpathy/status/1346558827643080705) at how effective it is at [generalizing](https://twitter.com/sama/status/1346543962652246017).
 
-In any case, though models like BERT and GPT-3 are interesting and powerful if used only in ways that don't expose their many limitations, a purely geometric approach to language seems to be lacking something.
+In any case, though models like BERT and GPT-3 are interesting and powerful if used only in ways that don't expose their many limitations. A purely geometric approach to language seems to be lacking something.
 
 ### A Notable Gap
 
-My favourite example of a problem where geometric approaches (i.e. deep learning) don't work very well is the [DeepMind Mathematics Dataset](https://github.com/deepmind/mathematics_dataset).
+One of my favourite examples of a problem where geometric approaches (i.e. deep learning) don't work very well is the [DeepMind Mathematics Dataset](https://github.com/deepmind/mathematics_dataset).
 
 DeepMind and OpenAI have [both](https://arxiv.org/abs/1904.01557) [trained](https://arxiv.org/abs/2010.14701) fairly large transformer models on it, treating it as a sequence-to-sequence problem where the input is the question statement and the output is the answer. It's a testament to the power of deep learning that this works at all. If you restrict concern to the arithmetic problems it's like trying to implement a pocket calculator within the weights of a neural network. Yes, amazing that it kinda works, but I'm quite confident that the first systems that satisfactory solve this dataset won't look like that.
 
