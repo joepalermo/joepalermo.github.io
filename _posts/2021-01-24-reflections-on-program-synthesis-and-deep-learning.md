@@ -15,7 +15,7 @@ Traditionally people have referred to program synthesis as the more narrowly def
 
 We can view machine learning as a type of program synthesis. In machine learning we define a search space of functions, then we use various optimization methods to find a function in that space that optimizes a cost function expressed in terms of a dataset. That learned function is simply a program that computes outputs given inputs.
 
-## Deep Learning
+## When and Why does Deep Learning Work?
 
 Deep learning has been so successful because its method of finding programs, namely gradient descent via backpropagation, is amazingly powerful and efficient. However, despite the amazing power of deep learning it's clear that as a field we're missing some things. According to Chollet, the power of deep learning arises from the capability to interpolate between data points, a capability which can only exist in a space where continuous interpolation makes sense. *"the ability to interpolate between samples is the key to understanding generalization in deep learning. It’s the reason why deep learning works… [you can] make sense of points you’ve never seen before by relating them to other points that lie close to them on the manifold.”"* That also points at another limitation of deep learning which is that to train a model that can relate never-before-seen points to points that lie close to them on a manifold, one needs a fairly dense sampling of points along the whole manifold. Otherwise, the system will have gaps in its capability to generalize, reflecting gaps in the data itself. This is why the performance of deep learning models depends heavily on the size, diversity, and stationarity of the datasets they're trained on.
 
@@ -37,7 +37,7 @@ When is it possible to use a deep learning to effectively cluster samples? Perha
 
 In some problems it will be fairly easy to construct such a geometric analogy. In others it will be harder. In fact, I think there is at least in principle a continuum here between problem-spaces where geometric analogy is easy and others where it is hard.
 
----
+### Successes of Deep Learning
 
 The areas that deep learning has been particularly successful in tend to have clear geometric interpretations. Consider this list:
 
@@ -46,7 +46,7 @@ The areas that deep learning has been particularly successful in tend to have cl
 - Game play: MuZero
 - Protein folding: AlphaFold
 
-In visual perception and synthesis a geometric interpretation is quite intuitive. After all visual perception and synthesis are explicitly about processing information derived from 2 and 3 dimensional spaces. Admittedly auditory perception and synthesis is intuitive to see as a geometric domain if you reflect on the structure of a time or frequency domain audio waveform - images of which can be projected into 2 dimensional space.
+In visual perception and synthesis a geometric interpretation is quite intuitive. After all visual perception and synthesis are explicitly about processing information derived from 2 and 3 dimensional spaces. Auditory perception and synthesis is intuitive to see as a geometric domain if you reflect on the structure of a time or frequency domain audio waveform - images of which can be projected into 2 dimensional space.
 
 Considering games such as Go or Chess, a geometric interpretation is very natural in that pieces on a board have a simple and well-defined geometric relationship to each other. The same is true of most Atari-like video games.
 
@@ -58,7 +58,7 @@ DALL-E was a recent and amazing step in this direction. I was as many people hav
 
 In any case, though models like BERT and GPT-3 are interesting and powerful if used only in ways that don't expose their many limitations, a purely geometric approach to language seems to be lacking something.
 
----
+### A Notable Gap
 
 My favourite example of a problem where geometric approaches (i.e. deep learning) don't work very well is the [DeepMind Mathematics Dataset](https://github.com/deepmind/mathematics_dataset).
 
