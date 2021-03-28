@@ -7,31 +7,31 @@ title: The State of Artificial Intelligence
 
 Today AI is practically synonomous with deep learning. All of the landmark AI accomplishments of the last 10 years were accomplished with deep learning. Here is a sampling of some of the most important achievements:
 
--AlexNet
--Practical self-driving cars (e.g. Tesla Autopilot, Waymo, etc...)
--AlphaGo
--AlphaFold
--GPT-3
--DALL-E
+- AlexNet
+- Practical self-driving cars (e.g. Tesla Autopilot, Waymo, etc...)
+- AlphaGo
+- AlphaFold
+- GPT-3
+- DALL-E
 
 Before deep learning a list of the most important AI accomplishments might look something like this:
 
--DeepBlue
--Watson (the Jeopardy playing system)
--uh...
+- DeepBlue
+- Watson (the Jeopardy playing system)
+- uh...
 
 It's hard to come up with much of a list because most of what came before deep learning was closer to the core of computer science. It was about algorithms for efficiently searching data structures, logic-based representations of knowledge, etc... It involved coming up with lots of tricks and heuristics, and its methods were less powerful and general. A history of the early days in AI reveals many systems like SHRDLU (1972). SHRDLU was a reasoning engine in a virtual "blocks world" environment. It was implemented in Lisp and had separate hardcoded modules for parsing language and logical inference [1]. Given a representation of a "blocks world" it could respond to things such as: "Find a block which is taller than the one you are holding and put it in the box". It was very impressive at the time, but it wasn't generally understood until later that such systems scaled very poorly to larger problem instances.
 
 In their textbook, Norvig and Russell list the following accomplishments as state-of-the-art (2010):
 
--Robotic vehicles
--Speech recognition
--Autonomous planning and scheduling
--Game playing
--Spam fighting
--Logistics planning
--Robotics
--Machine translation
+- Robotic vehicles
+- Speech recognition
+- Autonomous planning and scheduling
+- Game playing
+- Spam fighting
+- Logistics planning
+- Robotics
+- Machine translation
 
 Nearly all of these are dominated by deep learning today! Even in the domain of planning and scheduling (which is not a focus area of deep learning research), such problems can potentially be converted into reinforcement learning environments and solved with deep reinforcement learning.
 
@@ -45,11 +45,11 @@ Current systems are very good at extracting functions underlying robust correlat
 
 Let's deconstruct this:
 
--fuctions: We're always learning a mapping from one space to another space (although sometimes the function maps back to the same space, as in an autoencoder)
--robust: The correlations need to be consistent over time. If they are rapidly changing then there is no durable function to learn, for example take the correlations between stock prices.
--correlations: To learn a function you need inputs and outputs. These have to be correlated with each other, otherwise there is nothing to learn.
--large amounts [of data]: Distributed representations and hierarchical structure provide impressive generalization power, but these models still require a fairly dense sampling of the input space.
--continuous data: In order for deep learning to work, you have to be able to interpolate between samples.
+- **functions**: We're always learning a mapping from one space to another space (although sometimes the function maps back to the same space, as in an autoencoder)
+- **robust**: The correlations need to be consistent over time. If they are rapidly changing then there is no durable function to learn, for example take the correlations between stock prices.
+- **correlations**: To learn a function you need inputs and outputs. These have to be correlated with each other, otherwise there is nothing to learn.
+- **large amounts [of data]**: Distributed representations and hierarchical structure provide impressive generalization power, but these models still require a fairly dense sampling of the input space.
+- **continuous data**: In order for deep learning to work, you have to be able to interpolate between samples.
 
 For more on this conception of the nature of deep learning please see [Francois Chollet's 2020 Neurips talk](https://slideslive.com/38935790/abstraction-reasoning-in-ai-systems-modern-perspectives) or [my writeup on it](https://joepalermo.github.io/2021/01/10/talk-review-francois-chollet-neurips-2020.html).
 
@@ -76,6 +76,7 @@ GPT-3 is unable to distinguish the questions that make sense from those that don
 I think sense-making requires simulation of some sort. If you were to pose the question "How many eyes does my foot have?", an image of a foot may flit subliminally in your mind. You know what an eye is and what a foot is because they are both a part of the world you inhabit. In order to answer the question, your mind might be executing an algorithm such as the following:
 
 1 - Generate a visuo-spatial representation of a foot
+
 2 - Look for eyes in that representation and then count them
 
 I'm not literally saying this is the algorithm, but I have a hunch that this is the right direction. I'm also not saying this is how you answer every question. For example when answering "How many eyes does a spider have?", I'm pretty sure the answer is arrived at in most people by rote memory lookup rather than generating a mental image of a spider and counting its eyes (that'd be kind of creepy, ha).
