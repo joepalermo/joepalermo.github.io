@@ -1,4 +1,4 @@
-# ---
+---
 layout: post
 title: The State of Artificial Intelligence
 ---
