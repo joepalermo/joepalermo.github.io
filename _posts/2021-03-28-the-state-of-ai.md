@@ -39,9 +39,9 @@ Deep learning has brought about a unification of many previously disparate disci
 
 Now let's dig a bit deeper into this capability deep learning has unlocked.
 
-## deconstructing deep learning
+## Deconstructing deep learning
 
-Current systems are very good at extracting functions underlying robust correlations, particularly in domains with large amounts of continuous data. Thanks to the deep learning revolution, this is the case even if the patterns underlying the correlations are complex and hierarchical. By hierarchical I mean that the patterns exist at several levels in a hierarchy. For example, protein structure is influenced by multiple levels in a hierarchy (individual amino acids have interactions that influence structure but so do larger groups and sub-structures). Before deep learning it was generally the case that only non-hierarchical patterns could be easily learned.
+Current systems are very good at **extracting functions underlying robust correlations, particularly in domains with large amounts of continuous data**. Thanks to the deep learning revolution, this is the case even if the patterns underlying the correlations are complex and hierarchical. By hierarchical I mean that the patterns exist at several levels in a hierarchy. For example, protein structure is influenced by multiple levels in a hierarchy (individual amino acids have interactions that influence structure but so do larger groups and sub-structures). Before deep learning it was generally the case that only non-hierarchical patterns could be easily learned.
 
 Let's deconstruct this:
 
@@ -100,5 +100,5 @@ Another task I think could be interesting for this purpose is the general proble
 
 ## References
 
-[] - Terry Winograd's PhD dissertation: http://hci.stanford.edu/~winograd/shrdlu/AITR-235.pdf
-[] - https://lacker.io/ai/2020/07/06/giving-gpt-3-a-turing-test.html
+[1] - Terry Winograd's PhD dissertation: http://hci.stanford.edu/~winograd/shrdlu/AITR-235.pdf
+[2] - https://lacker.io/ai/2020/07/06/giving-gpt-3-a-turing-test.html
