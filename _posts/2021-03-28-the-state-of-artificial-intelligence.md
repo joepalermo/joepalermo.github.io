@@ -101,4 +101,5 @@ Another task I think could be interesting for this purpose is the general proble
 ## References
 
 [1] - Terry Winograd's PhD dissertation: http://hci.stanford.edu/~winograd/shrdlu/AITR-235.pdf
+
 [2] - https://lacker.io/ai/2020/07/06/giving-gpt-3-a-turing-test.html
