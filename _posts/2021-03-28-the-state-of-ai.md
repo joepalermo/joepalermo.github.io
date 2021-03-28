@@ -1,6 +1,6 @@
 # ---
 layout: post
-title: The State of AI
+title: The State of Artificial Intelligence
 ---
 
 ## What AI can do today
