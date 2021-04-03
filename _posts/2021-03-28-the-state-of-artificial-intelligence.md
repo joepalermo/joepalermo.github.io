@@ -5,7 +5,7 @@ title: The State of Artificial Intelligence
 
 ## What AI can do today
 
-Today AI is practically synonomous with deep learning. All of the landmark AI accomplishments of the last 10 years were accomplished with deep learning. Here is a sampling of some of the most important achievements:
+Today AI is practically synonomous with deep learning. All of the landmark AI accomplishments of the last 10 years were accomplished with deep learning. Here is a sample of the landmark achievements of deep learning:
 
 - AlexNet
 - Practical self-driving cars (e.g. Tesla Autopilot, Waymo, etc...)
@@ -14,13 +14,12 @@ Today AI is practically synonomous with deep learning. All of the landmark AI ac
 - GPT-3
 - DALL-E
 
-Before deep learning a list of the most important AI accomplishments might look something like this:
+Before deep learning a list of notable AI accomplishments might look something like this:
 
 - DeepBlue
 - Watson (the Jeopardy playing system)
-- uh...
 
-It's hard to come up with much of a list because most of what came before deep learning was closer to the core of computer science. It was about algorithms for efficiently searching data structures, logic-based representations of knowledge, etc... It involved coming up with lots of tricks and heuristics, and its methods were less powerful and general. A history of the early days in AI reveals many systems like SHRDLU (1972). SHRDLU was a reasoning engine in a virtual "blocks world" environment. It was implemented in Lisp and had separate hardcoded modules for parsing language and logical inference [1]. Given a representation of a "blocks world" it could respond to things such as: "Find a block which is taller than the one you are holding and put it in the box". It was very impressive at the time, but it wasn't generally understood until later that such systems scaled very poorly to larger problem instances.
+It's a short list because most of what came before deep learning was closer to the core of computer science. It was about algorithms for efficiently searching data structures, logic-based representations of knowledge, etc... It involved coming up with lots of tricks and heuristics, and its methods were less powerful and general. A history of the early days in AI reveals many systems like SHRDLU (1972). SHRDLU was a reasoning engine in a virtual "blocks world" environment. It was implemented in Lisp and had separate hardcoded modules for parsing language and logical inference [1]. Given a representation of a "blocks world" it could respond to things such as: "Find a block which is taller than the one you are holding and put it in the box". It was very impressive at the time, but it wasn't generally understood until later that such systems scaled very poorly to larger problem instances.
 
 In their textbook, Norvig and Russell list the following accomplishments as state-of-the-art (2010):
 
@@ -79,11 +78,11 @@ I think sense-making requires simulation of some sort. If you were to pose the q
 
 2 - Look for eyes in that representation and then count them
 
-I'm not literally saying this is the algorithm, but I have a hunch that this is the right direction. I'm also not saying this is how you answer every question. For example when answering "How many eyes does a spider have?", I'm pretty sure the answer is arrived at in most people by rote memory lookup rather than generating a mental image of a spider and counting its eyes (that'd be kind of creepy, ha).
+I'm not literally saying this is the algorithm, but I have a hunch that this is the right direction. I'm also not saying this is how you answer every question. For example when answering "How many eyes does a spider have?", I'm pretty sure the answer is arrived at in most people by rote memory lookup rather than generating a mental image of a spider and counting its eyes.
 
 ### Reasoning from limited data
 
-AI is already better than us at reasoning in sufficiently constrained domains that can be simulated. For example, as seen in game-playing systems such as AlphaGo (subsequently superseded by AlphaZero and MuZero). However, these systems are much less efficient at learning to play than humans are. A human can reach expert level in perhaps thousands or tens of thousands of games. Reinforcement learning systems require millions of games.
+AI is already better than us at reasoning in sufficiently constrained, simulatable domains. For example, we've seen this in game-playing systems such as AlphaGo (subsequently superseded by AlphaZero and MuZero). However, these systems are much less efficient at learning to play than humans are. A human can reach expert level in perhaps thousands or tens of thousands of games. Reinforcement learning systems require millions of games.
 
 The best definition of intelligence I've ever encountered is Francois Chollet's:
 
@@ -93,7 +92,7 @@ I wrote about this at length in my aforementioned writeup of Chollet's 2020 Neur
 
 By this definition, surpassing humans at any specific highly constrained task cannot demonstrate intelligence. This is because it is always possible to achieve better performance by hardcoding better priors or acquiring more experience at the task (which machines are very efficient at acquiring).
 
-In Chollet's paper he introduced a reasoning task that he believes gets at the core of the problem - The Abstract Reasoning Corpus (ARC). ARC tasks are visual puzzles that require generalizing from very few examples.
+In Chollet's paper he introduced a reasoning task that he believes gets at the core of the problem - The Abstract Reasoning Corpus (ARC). ARC tasks are visual puzzles that require generalizing from very few examples. The small size of the dataset is an important feature of the dataset because it means that one cannot hope to simply fit the dataset with a high capacity model and get good generalization results. With ARC, Chollet is trying to stimulate research in the development of new stronger priors that can enable generalization from smaller amounts of data.
 
 Another task I think could be interesting for this purpose is the general problem of theorem proving. There is a very limited body of existing formalized mathematics for neural theorem provers to learn from. Of course, mathematics is inherently computational and so in principle can be explored without limit by machines. However, the question of how to do open-ended exploration and learning in the mathematical domain is a very hard open problem, as the size of the state and action spaces is practically infinite.
 
