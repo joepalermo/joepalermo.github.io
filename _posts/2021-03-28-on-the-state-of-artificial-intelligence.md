@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The State of Artificial Intelligence
+title: On the State of Artificial Intelligence
 ---
 
 ## What AI can do today
@@ -96,6 +96,10 @@ In Chollet's paper he introduced a reasoning task that he believes gets at the c
 
 Another task I think could be interesting for this purpose is the general problem of theorem proving. There is a very limited body of existing formalized mathematics for neural theorem provers to learn from. Of course, mathematics is inherently computational and so in principle can be explored without limit by machines. However, the question of how to do open-ended exploration and learning in the mathematical domain is a very hard open problem, as the size of the state and action spaces is practically infinite.
 
+### Generalization in reinforcement learning
+
+
+### OOD Generalization
 
 ## References
 
