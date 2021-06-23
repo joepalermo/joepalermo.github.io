@@ -7,19 +7,14 @@ title: On the State of Artificial Intelligence
 
 Today AI is practically synonomous with deep learning. All of the landmark AI accomplishments of the last 10 years were accomplished with deep learning. Here is a sample of the landmark achievements of deep learning:
 
-- AlexNet
-- Practical self-driving cars (e.g. Tesla Autopilot, Waymo, etc...)
-- AlphaGo
-- AlphaFold
-- GPT-3
-- DALL-E
+- AlexNet: The moment when image recognition passed the threshold into practicality
+- Self-driving cars (e.g. Tesla Autopilot, Waymo, etc...): The technology isn't fully autonomous yet but it continues to progress rapidly
+- AlphaGo: Beating humans at abstract pattern recognition in a closed domain
+- AlphaFold: A massive advance in the accuracy of protein folding algorithms
+- GPT-3: Generating text which looks plausibly human-written in any context
+- DALL-E: Generating images from text with impressive generalization
 
-Before deep learning a list of notable AI accomplishments might look something like this:
-
-- DeepBlue
-- Watson (the Jeopardy playing system)
-
-It's a short list because most of what came before deep learning was closer to the core of computer science. It was about algorithms for efficiently searching data structures, logic-based representations of knowledge, etc... It involved coming up with lots of tricks and heuristics, and its methods were less powerful and general. A history of the early days in AI reveals many systems like SHRDLU (1972). SHRDLU was a reasoning engine in a virtual "blocks world" environment. It was implemented in Lisp and had separate hardcoded modules for parsing language and logical inference [1]. Given a representation of a "blocks world" it could respond to things such as: "Find a block which is taller than the one you are holding and put it in the box". It was very impressive at the time, but it wasn't generally understood until later that such systems scaled very poorly to larger problem instances.
+For most of AI's history it was dominated by algorithms for efficiently searching and building specialized data structures. It involved coming up with lots of tricks and heuristics and its methods were less powerful and general. A history of the early days in AI reveals many systems like SHRDLU (1972). SHRDLU was a reasoning engine in a virtual "blocks world" environment. It was implemented in Lisp and had separate hardcoded modules for parsing language and logical inference [1]. Given a representation of a "blocks world" it could respond to queries such as: "Find a block which is taller than the one you are holding and put it in the box". It was very impressive at the time, but it wasn't generally understood until later that such systems scaled very poorly to larger problem instances.
 
 In their textbook, Norvig and Russell list the following accomplishments as state-of-the-art (2010):
 
@@ -32,7 +27,7 @@ In their textbook, Norvig and Russell list the following accomplishments as stat
 - Robotics
 - Machine translation
 
-Nearly all of these are dominated by deep learning today! Even in the domain of planning and scheduling (which is not a focus area of deep learning research), such problems can potentially be converted into reinforcement learning environments and solved with deep reinforcement learning.
+Nearly all of these are dominated by deep learning today! Even in the domain of planning and scheduling (which to my knowledge is not a focus area of deep learning research), such problems can potentially be converted into reinforcement learning environments and solved with deep reinforcement learning.
 
 Deep learning has brought about a unification of many previously disparate disciplines of AI: computer vision, natural language processing, audio processing, and reinforcement learning are now all unified by the use of backpropagation as the core learning algorithm.
 
@@ -95,11 +90,6 @@ By this definition, surpassing humans at any specific highly constrained task ca
 In Chollet's paper he introduced a reasoning task that he believes gets at the core of the problem - The Abstract Reasoning Corpus (ARC). ARC tasks are visual puzzles that require generalizing from very few examples. The small size of the dataset is an important feature of the dataset because it means that one cannot hope to simply fit the dataset with a high capacity model and get good generalization results. With ARC, Chollet is trying to stimulate research in the development of new stronger priors that can enable generalization from smaller amounts of data.
 
 Another task I think could be interesting for this purpose is the general problem of theorem proving. There is a very limited body of existing formalized mathematics for neural theorem provers to learn from. Of course, mathematics is inherently computational and so in principle can be explored without limit by machines. However, the question of how to do open-ended exploration and learning in the mathematical domain is a very hard open problem, as the size of the state and action spaces is practically infinite.
-
-### Generalization in reinforcement learning
-
-
-### OOD Generalization
 
 ## References
 
