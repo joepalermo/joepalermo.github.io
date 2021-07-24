@@ -16,4 +16,12 @@ Here is a list of my writings:
   {% endfor %}
 </ul>
 
+Here is a list of my papers:
+
+<ul>
+  <li>
+  <a href="https://arxiv.org/abs/2107.07373">A Reinforcement Learning Environment for Mathematical Reasoning via Program Synthesis</a>
+  </li>
+</ul>
+
 You can reach me josephwpalermo at gmail.
