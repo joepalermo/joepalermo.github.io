@@ -22,6 +22,10 @@ Here is a list of my papers:
   <li>
   <a href="https://arxiv.org/abs/2107.07373">A Reinforcement Learning Environment for Mathematical Reasoning via Program Synthesis</a>
   </li>
+
+  <li>
+  Forthcoming at AITP 2022 "Synthetic Proof Term Data Augmentation for Theorem Proving with Language Models"
+  </li>
 </ul>
 
 You can reach me josephwpalermo at gmail.
