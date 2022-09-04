@@ -24,7 +24,7 @@ Here is a list of my papers:
   </li>
 
   <li>
-  Forthcoming at AITP 2022 "Synthetic Proof Term Data Augmentation for Theorem Proving with Language Models"
+  <a href="http://aitp-conference.org/2022/abstract/AITP_2022_paper_5.pdf">Synthetic Proof Term Data Augmentation for Theorem Proving with Language Models (accepted at AITP 2022)
   </li>
 </ul>
 
