@@ -20,11 +20,11 @@ Here is a list of my papers:
 
 <ul>
   <li>
-  A Reinforcement Learning Environment for Mathematical Reasoning via Program Synthesis (<a href="https://arxiv.org/abs/2107.07373">link</a>)
+  <a href="https://arxiv.org/abs/2107.07373">A Reinforcement Learning Environment for Mathematical Reasoning via Program Synthesis</a>
   </li>
 
   <li>
-  Synthetic Proof Term Data Augmentation for Theorem Proving with Language Models (<a href="http://aitp-conference.org/2022/abstract/AITP_2022_paper_5.pdf">link</a>)
+  <a href="http://aitp-conference.org/2022/abstract/AITP_2022_paper_5.pdf">Synthetic Proof Term Data Augmentation for Theorem Proving with Language Models</a>
   </li>
 </ul>
 
