@@ -3,7 +3,7 @@ layout: post
 title: Talk Review - Francois Chollet's Neurips 2020 Talk
 ---
 
-I've been finding Francois Chollet's line of thinking on the nature of intelligence since his 2019 paper "The Measure of Intelligence" to be very insightful. This post is my attempt to walk through the ideas from his [talk at Neurips 2020](https://slideslive.com/38935790/abstraction-reasoning-in-ai-systems-modern-perspectives) and also to synthesize for myself a better understanding of his thesis. Note that this is not intended as a tutorial on Chollet's ideas, merely my own reflections on them.
+Since his 2019 paper "The Measure of Intelligence", I've been finding Francois Chollet's line of thinking to be very insightful. This post is my attempt to walk through the ideas from his [talk at Neurips 2020](https://slideslive.com/38935790/abstraction-reasoning-in-ai-systems-modern-perspectives) and also to synthesize for myself a better understanding of his thesis.
 
 The title of the talk is **"Why abstraction is the key to intelligence, and what we're still missing"**.
 
@@ -23,7 +23,7 @@ V. The road ahead: bridging both worlds
 
 ## I. To make progress towards AI, we need to measure & maximize generalization
 
-Chollet begins by defining generalization and his definition won't surprise you. He defines it as *"the ability to handle situations (or tasks) that differ from previously encountered situations"*. He then proceeds to introduce a simple hierarchy of the forms of generalization (from no generalization at all to *"extreme"* generalization) that he introduced originally in his paper [*"On the Measure of Intelligence"*](https://arxiv.org/abs/1911.01547).
+Chollet begins by defining generalization as *"the ability to handle situations (or tasks) that differ from previously encountered situations"*. He then proceeds to introduce a simple hierarchy of the forms of generalization (from no generalization at all to *"extreme"* generalization) that he introduced originally in his paper [*"On the Measure of Intelligence"*](https://arxiv.org/abs/1911.01547).
 
 In that paper he defined intelligence as: *"The intelligence of a system is a measure of its skill-acquisition efficiency over a scope of tasks, with respect to priors, experience, and generalization difficulty."*
 
@@ -43,7 +43,7 @@ It's interesting to consider this definition in the historical context of AI.
 
 The early days of AI looked very much like the field we simply call "algorithms" today. It was about identifying structure in problems and defining data structures and algorithms to exploit that structure to rapidly solve instances of a given problem type. Many students of AI have no doubt been surprised and disappointed (as I was) to open up the standard textbook on the field (Norvig & Russell's *Artificial Intelligence: A Modern Approach*) and find that the first several sections, tracing the early history of the field, is nearly indistinguishable from a textbook on algorithms. A\* search, alpha-beta pruning, constraint satisfaction algorithms, etc... The connection to Chollet's ideas is that the early history of AI tended to focus on defining priors in the form of data structures and algorithms, and tended to leave out experience and learning.
 
-The field of AI post the deep-learning revolution seems to have the opposite obsession. In the last few years there is much emphasis about learning as much as possible from scratch, and for good reason. Computer vision researchers laboured for years refining complicated algorithms by hand, only to be blown away by AlexNet which utilized only a few simple inductive biases (distributed representations, equivariance to translation, etc...) plus lots of training data. DeepMind's progression from AlphaGo to AlphaZero to MuZero has been about removing assumptions about the structure of the problem, thus increasing the generality of the resulting learning algorithms. Note however that these systems seem to require a massive amount of experience to reach human-level performance on the tasks they train on. Using massive models on massive datasets is all the rage, with OpenAI's GPT-3 and DALL-E being perhaps the most impressive systems in this line of development. Again, the connection to Chollet's ideas is that the deep learning era seems to be focused on maximally exploiting experience in the form of training data. Of course, deep learning still relies on priors encoded by the architecture and optimization procedures. In machine learning, these are also known as inductive biases. What makes them priors is that they are specified by-hand. Despite much effort to automate designer effort, architecture and hyperparameter search only goes so far, especially when you're already investing so much compute into training a single model from scratch.
+Today AI is focused almost entirely on learning. Computer vision researchers laboured for years refining complicated algorithms by hand, only to be blown away by AlexNet which utilized only a few simple inductive biases (distributed representations, equivariance to translation, etc...) plus lots of training data. DeepMind's progression from AlphaGo to AlphaZero to MuZero has been about removing assumptions about the structure of the problem, thus increasing the generality of the resulting learning algorithms. Note however that these systems require a massive amount of experience to reach human-level performance on the tasks they train on. Training massive models on massive datasets is all the rage, with OpenAI's GPT-3 and DALL-E being perhaps the most impressive systems in this line of development. That being said, even large scale deep learning relies on priors encoded by the architecture and optimization procedures. What makes them priors is that they are specified by hand. Despite much effort to automate designer effort, architecture and hyperparameter search only goes so far, especially when you're already investing so much compute into training a single model from scratch.
 
 In Chollet's view, task-specific skills can't tell you anything about an agent's intelligence, because it is possible to *"buy arbitrary performance"* by simply defining better priors or utilizing more experience. *"[Defining better priors or training from more experience] reduces uncertainty and novelty and thus reduces the need for generalization."*
 
@@ -87,8 +87,6 @@ In his talk Chollet briefly introduces his dataset and challenge problem for AI 
 
 *"So intelligence, which is to say, generalization power, is literally sensitivity to abstract analogies, and that's in fact all there is to it. Intelligence is sensitivity to analogies. So if you have a very high sensitivity to analogies, you will be able to extract powerful abstractions from little experience. And you will be able to use these abstractions to operate in a maximally large area of future experience space. You will be maximally efficient in converting past experience into the ability to handle future novelty."*
 
-Now Chollet gets into more detail on what he means by abstraction.
-
 *"There are two key categories of abstractions that we're interested in in this talk: value-centric abstraction and program-centric abstraction...they're pretty similar to each other: both of them are about comparing things and merging individual instances into common abstractions by eliminating certain details about these instances. But there's a key difference, which is that one of them operates over a continuous domain and the other over a discrete domain."*
 
 *Value-centric abstraction* (or *value-analogy*) is the one that operates over a continuous domain and *program-centric abstraction* (or *program-analogy*) is the one that operates over a discrete domain.
@@ -113,12 +111,6 @@ Deep learning is good at value-centric abstraction.
 
 - *"There is a dense sampling of this manifold available (i.e. lots of training data)"*
 
-So-called Good Old Fashioned AI (or GOFAI) failed to solve problems like object recognition or speech recognition because programs written by hand can't handle the combinatorial explosion of possible inputs.
-
-Perhaps the core lesson of the deep learning revolution is that for many forms of natural data, deep neural networks can be trained to project data points on to continuous manifolds. If any input from the distribution in question can be placed neatly onto a learned manifold, then linear layers can easily be trained to draw decision boundaries through the manifold.
-
-Chollet's point is that this trick only goes so far.
-
 ## IV. Discrete program search: how to learn to reason
 
 *"So how do you solve these problems like ARC, sorting a list, finding prime numbers, etc...? Any reasoning and planning problem. The answer is simple, it’s program synthesis. Which is to say combinatorial search over graphs of operators taken from a domain specific language (DSL). Discrete search over graphs."*
@@ -131,7 +123,7 @@ Chollet's point is that this trick only goes so far.
 
 He notes that all of the top solutions to ARC so far are based on program search over a DSL, with heuristics to make search more efficient. *"even though they're very primitive they remain infinitely more successful than deep learning on ARC problems."*
 
-At first blush it sounds like Chollet is suggesting a return to GOFAI, but that's not what Chollet is advocating. He recognizes that to utilize program synthesis we need to grapple with the challenge of combinatorial explosion - precisely the challenge that toppled GOFAI. So how do we do this?
+At first it sounds like Chollet is suggesting a return to GOFAI, but that's not what Chollet is advocating. He recognizes that to utilize program synthesis we need to grapple with the challenge of combinatorial explosion - precisely the challenge that toppled GOFAI. So how do we do this?
 
 *"If you want to make something efficient, there's a universal recipe, which is that you introduce modularity and hierarchy...Deep learning is what you get when you add modularity and hierarchy to continuous optimization...if you hard code abstract module reuse in continuous optimization, then you get deep learning architecture patterns. For instance, convolution is a hard coded module which abstracts away spatial position. RNNs [are]... abstract with respect to the time axis..."*
 
@@ -141,7 +133,7 @@ He continues by elaborating on the use of program-centric abstraction here:
 
 *"The general idea is that you start with a given DSL and you run program search to solve various problems, like ARC tasks, for instance, so you generate solution programs, and you start identifying subgraph isomorphisms, both within the program and across programs, and you abstract away these subprograms into reusable functions, and you add these functions back to the DSL, and you keep searching."*
 
-Of course this teaser paragraph above is really just the abstract for a research program, not a complete idea. Chollet provides no references and I'm not aware of any research that has made concrete steps in this direction.
+Of course this teaser paragraph above is really just the abstract for a research program, not a complete idea. One paper that make steps in this direction (which Chollet has remarked on several times in interviews) is [Dreamcoder](https://arxiv.org/abs/2006.08381). See also this more recent talk in which some of the authors of that work seek to apply it to Chollet's ARC task.
 
 In an earlier part of the talk Chollet provides this description of program-centric abstraction:
 
@@ -155,7 +147,7 @@ Returning back to the discussion on program synthesis, Chollet notes:
 
 *"There's also a complementary and even more powerful way to improve program synthesis, and that is to merge program synthesis with deep learning, to leverage deep learning as a way to reduce the program search space and to fight combinatorial explosion."*
 
-This is much more familiar to me as it is precisely the use of deep learning in systems like AlphaZero. It is also present in virtually all of the work on automated theorem proving with machine learning. See for instance [GPT-F](https://arxiv.org/abs/2009.03393) which utilizes a GPT-like language model to make proof search tractable.
+This is much more familiar to me as it is precisely the use of deep learning in systems like AlphaZero. It is also present in virtually all of the work on automated theorem proving with machine learning. See for instance [GPT-f](https://arxiv.org/abs/2009.03393) which utilizes a GPT-like language model to make proof search tractable.
 
 ## V. The road ahead: bridging both worlds
 
