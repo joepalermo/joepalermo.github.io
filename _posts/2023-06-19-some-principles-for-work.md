@@ -1,4 +1,4 @@
-As a young person, I was afflicted with a lot of confusion about what to value and how to live. Over time I embraced a few principles that made a great difference.
+As a young person, I was afflicted with a lot of confusion about what was important in my career. Over time I embraced a few principles that made a great difference.
 
 **Be useful. Solve problems.**
 
