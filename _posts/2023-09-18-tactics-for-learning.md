@@ -10,4 +10,4 @@ Reading is only the first step on the path of learning. After you've read someth
 
 Notes:
 
-- Andrej Karpathy has made similar comments: https://twitter.com/karpathy/status/1325154823856033793?lang=en
+- Andrej Karpathy has made [similar comments](https://twitter.com/karpathy/status/1325154823856033793?lang=en)
