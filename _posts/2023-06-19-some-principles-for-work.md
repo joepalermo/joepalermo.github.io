@@ -8,8 +8,6 @@ As a student, I used to worry a lot about how much I *enjoyed* my studies. There
 
 It's possible to work very hard and achieve very little of substance. The context in which you work matters a lot. If you're isolated in your own bubble, you will be very limited in what you can achieve. The people around you are a potential multiplier on your efforts. This is why great entrepreneurs can achieve things that seem superhuman or impossible. They wield great leverage through people and capital. And what is more, this is a very good thing for many of the people who work for them too. Living on their own in the wilderness, they might produce enough to survive but not much more. Instead, by working for a great company, the things they produce are in turn used by their colleagues, and the total produced becomes more than the sum of the parts. You don't have to work for a great company to do useful work, but your work should still be embedded within some larger context or community.
 
-- https://twitter.com/karpathy/status/1325154823856033793?lang=en
-
 **Recognize the danger of pessimism.**
 
 You have to believe that success is one of the possible outcomes to justify trying anything difficult. An overly pessimistic outlook will prevent you from even trying. It can be hard to distinguish rational groundedness from debilitating pessimism. Though being grounded in reality is essential for real progress, you should lean into optimism because it is simply a fact that the greatest accomplishments often seemed impossible from the outset.
