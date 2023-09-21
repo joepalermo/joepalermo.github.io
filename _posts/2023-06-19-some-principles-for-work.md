@@ -10,7 +10,7 @@ It's possible to work very hard and achieve very little of substance. The contex
 
 **Self-belief is self-fulfilling.**
 
-Many people fail before they start because they don't have the right attitude. Consider the following passage from Walter Isaacson's biography of Elon Musk:
+Consider the following passage from Walter Isaacson's biography of Elon Musk:
 
 *Musk had run out of money, Tesla was hemorrhaging cash, and SpaceX had crashed three rockets in a row. But he was not ready to give up. Instead, he would go for broke, literally. “SpaceX will not skip a beat in execution going forward,” he announced a few hours after the failure. “There should be absolutely zero question that SpaceX will prevail in reaching orbit. I will never give up, and I mean never.”*
 
@@ -21,3 +21,5 @@ Many people fail before they start because they don't have the right attitude. C
 *A jolt of optimism spread through headquarters. “I think most of us would have followed him into the gates of hell carrying suntan oil after that,” says Dolly Singh, the human resources director. “Within moments, the energy of the building went from despair and defeat to a massive buzz of determination.”*
 
 *Carl Hoffman, a Wired reporter who had watched the failure of the second launch with Musk, reached him to ask how he maintained his optimism. “Optimism, pessimism, fuck that,” Musk answered. “We’re going to make it happen. As God is my bloody witness, I’m hell-bent on making it work.”*
+
+With that level of determination, many things that are otherwise impossible crossover into the possible. 
