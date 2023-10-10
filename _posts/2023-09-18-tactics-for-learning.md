@@ -6,8 +6,8 @@ I love textbooks and other concentrations of knowledge, but there are downsides 
 
 **Embrace active recall and spaced repetition.**
 
-Reading is only the first step on the path of learning. After you've read something you should try to re-derive it yourself. If it's important you should re-derive it periodically by using a system such as [Anki](http://augmentingcognition.com/ltm.html) to automatically and efficiently schedule your reviews. You only understand something if you can create it and explain it from scratch, i.e. you have a generative model of that concept in your mind.
+Reading or hearing something for the first time is only the first step on the path of learning. After you've encountered an important new concept you should try to explain from scratch or re-derive it yourself. If it's a *really* important concept then you should make reviewing it periodically a priority. The best way to do that is to use a system such as [Anki](http://augmentingcognition.com/ltm.html) to automatically and efficiently schedule your reviews. Learning to use Anki well can be a super-power because it makes memory of any specific concept a choice (over the long-term) instead of something that happens haphazardly. Remember that you only understand something if you can re-create the concept in its entirety from scratch, i.e. you have a complete generative model of that concept in your mind.
 
 Notes:
 
-- Andrej Karpathy has made [similar comments](https://twitter.com/karpathy/status/1325154823856033793?lang=en)
+- Andrej Karpathy has independently made [similar comments](https://twitter.com/karpathy/status/1325154823856033793?lang=en) with a slightly different emphasis.
