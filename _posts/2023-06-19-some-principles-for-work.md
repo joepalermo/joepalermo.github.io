@@ -1,8 +1,8 @@
-As a young person, I was afflicted with a lot of confusion about what was important in my career. Over time I embraced a few principles that made a great difference.
+Here are a few principles I've found helpful in steering my career.
 
 **Be useful. Solve problems.**
 
-As a student, I used to worry a lot about how much I *enjoyed* my studies. There were points in time when I felt deeply absorbed by a subject only to find that my interest soon waned. People are wired with an inherent drive for novelty - this is what I was picking up and interpreting as *passion* in those early days. It wasn't until I read Cal Newport's [*So Good They Can't Ignore You*](https://www.amazon.com/gp/product/1455509124/) that I fully cut through the illusion that following passion was an especially useful career-building strategy. It turns out that there are other, more sustainable drives. Today I love the work that I do, but that has nothing to do with the domain in which I work. It's because, through my work, I solve problems and create things that others find useful.
+As a student, I used to worry a lot about how much I *enjoyed* my studies. There were points in time when I felt deeply absorbed by a subject only to find that my interest soon waned. As humans, we're wired with an inherent drive for novelty - this is what I was picking up and interpreting as *passion* in those early days. It wasn't until I read Cal Newport's [*So Good They Can't Ignore You*](https://www.amazon.com/gp/product/1455509124/) that I fully cut through the illusion that following passion was an especially useful career-building strategy. It turns out that there are other, more sustainable drives. Today I love the work that I do, but that has nothing to do with the domain in which I work. It's because, through my work, I solve problems and create things that others find useful.
 
 **Multiply your efforts by working with great people.**
 
@@ -22,4 +22,4 @@ Consider the following passage from Walter Isaacson's biography of Elon Musk:
 
 *Carl Hoffman, a Wired reporter who had watched the failure of the second launch with Musk, reached him to ask how he maintained his optimism. “Optimism, pessimism, fuck that,” Musk answered. “We’re going to make it happen. As God is my bloody witness, I’m hell-bent on making it work.”*
 
-With that level of determination, many things that are otherwise impossible crossover into the possible. 
+With that level of determination, many things that are otherwise impossible crossover into the possible.
